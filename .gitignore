@@ -1,0 +1,8 @@
+# Binary
+pricetracker
+
+# Environment
+.env
+
+# macOS
+.DS_Store
