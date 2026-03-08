@@ -3,26 +3,25 @@ package main
 import (
 	"encoding/csv"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 )
 
 const dataDir = "./data"
 
-type Item struct {
-	Name   string `json:"name"`
-	Price  string `json:"price"`
-	Source string `json:"source,omitempty"`
+type TableRow struct {
+	Name   string    `json:"name"`
+	Prices []*string `json:"prices"`
 }
 
-type PricesResponse struct {
-	Items []Item `json:"items"`
-	Count int    `json:"count"`
+type TableResponse struct {
+	Columns []string   `json:"columns"`
+	Rows    []TableRow `json:"rows"`
 }
 
 type ErrorResponse struct {
@@ -30,7 +29,7 @@ type ErrorResponse struct {
 }
 
 // readCSVFile parses a CSV file with "name" and "price" header columns.
-func readCSVFile(path, source string) ([]Item, error) {
+func readCSVFile(path string) (map[string]string, error) {
 	f, err := os.Open(path)
 	if err != nil {
 		return nil, err
@@ -43,7 +42,7 @@ func readCSVFile(path, source string) ([]Item, error) {
 		return nil, fmt.Errorf("parse %s: %w", filepath.Base(path), err)
 	}
 	if len(records) == 0 {
-		return nil, nil
+		return map[string]string{}, nil
 	}
 
 	header := records[0]
@@ -53,36 +52,68 @@ func readCSVFile(path, source string) ([]Item, error) {
 		return nil, fmt.Errorf("%s: expected columns 'name' and 'price', got %v", filepath.Base(path), header)
 	}
 
-	items := make([]Item, 0, len(records)-1)
+	prices := make(map[string]string, len(records)-1)
 	for _, row := range records[1:] {
 		if len(row) < 2 {
 			continue
 		}
-		items = append(items, Item{Name: row[0], Price: row[1], Source: source})
+		prices[row[0]] = row[1]
 	}
-	return items, nil
+	return prices, nil
 }
 
-// readAll reads every CSV file in dir.
-func readAll(dir string) ([]Item, error) {
+// buildTable reads all CSV files in dir and returns a pivot TableResponse.
+func buildTable(dir string) (TableResponse, error) {
 	entries, err := os.ReadDir(dir)
 	if err != nil {
-		return nil, fmt.Errorf("read data directory: %w", err)
+		return TableResponse{}, fmt.Errorf("read data directory: %w", err)
 	}
 
-	var all []Item
+	// Collect and sort CSV filenames alphabetically.
+	var files []string
 	for _, e := range entries {
-		if e.IsDir() || !strings.HasSuffix(strings.ToLower(e.Name()), ".csv") {
-			continue
+		if !e.IsDir() && strings.HasSuffix(strings.ToLower(e.Name()), ".csv") {
+			files = append(files, e.Name())
 		}
-		source := strings.TrimSuffix(e.Name(), ".csv")
-		items, err := readCSVFile(filepath.Join(dir, e.Name()), source)
-		if err != nil {
-			return nil, err
-		}
-		all = append(all, items...)
 	}
-	return all, nil
+	sort.Strings(files)
+
+	columns := make([]string, len(files))
+	colData := make([]map[string]string, len(files))
+	nameSet := make(map[string]struct{})
+
+	for i, fname := range files {
+		columns[i] = strings.TrimSuffix(fname, ".csv")
+		data, err := readCSVFile(filepath.Join(dir, fname))
+		if err != nil {
+			return TableResponse{}, err
+		}
+		colData[i] = data
+		for name := range data {
+			nameSet[name] = struct{}{}
+		}
+	}
+
+	// Collect and sort unique product names.
+	names := make([]string, 0, len(nameSet))
+	for name := range nameSet {
+		names = append(names, name)
+	}
+	sort.Strings(names)
+
+	rows := make([]TableRow, len(names))
+	for i, name := range names {
+		prices := make([]*string, len(columns))
+		for j, data := range colData {
+			if p, ok := data[name]; ok {
+				v := p
+				prices[j] = &v
+			}
+		}
+		rows[i] = TableRow{Name: name, Prices: prices}
+	}
+
+	return TableResponse{Columns: columns, Rows: rows}, nil
 }
 
 func writeJSON(w http.ResponseWriter, status int, v any) {
@@ -93,45 +124,20 @@ func writeJSON(w http.ResponseWriter, status int, v any) {
 	}
 }
 
-// pricesHandler serves GET /prices and GET /prices/{source}.
 func pricesHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		writeJSON(w, http.StatusMethodNotAllowed, ErrorResponse{Error: "method not allowed"})
 		return
 	}
 
-	// Extract optional source name from path: /prices/{source}
-	source := strings.Trim(strings.TrimPrefix(r.URL.Path, "/prices"), "/")
-
-	var (
-		items []Item
-		err   error
-	)
-
-	if source != "" {
-		items, err = readCSVFile(filepath.Join(dataDir, source+".csv"), source)
-		if err != nil {
-			if errors.Is(err, os.ErrNotExist) {
-				writeJSON(w, http.StatusNotFound, ErrorResponse{Error: fmt.Sprintf("source '%s' not found", source)})
-			} else {
-				log.Printf("read csv: %v", err)
-				writeJSON(w, http.StatusInternalServerError, ErrorResponse{Error: err.Error()})
-			}
-			return
-		}
-	} else {
-		items, err = readAll(dataDir)
-		if err != nil {
-			log.Printf("read all csvs: %v", err)
-			writeJSON(w, http.StatusInternalServerError, ErrorResponse{Error: err.Error()})
-			return
-		}
+	table, err := buildTable(dataDir)
+	if err != nil {
+		log.Printf("build table: %v", err)
+		writeJSON(w, http.StatusInternalServerError, ErrorResponse{Error: err.Error()})
+		return
 	}
 
-	if items == nil {
-		items = []Item{}
-	}
-	writeJSON(w, http.StatusOK, PricesResponse{Items: items, Count: len(items)})
+	writeJSON(w, http.StatusOK, table)
 }
 
 func healthHandler(w http.ResponseWriter, r *http.Request) {
@@ -146,7 +152,6 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/prices", pricesHandler)
-	mux.HandleFunc("/prices/", pricesHandler)
 	mux.HandleFunc("/health", healthHandler)
 
 	addr := ":" + port
