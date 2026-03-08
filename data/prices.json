@@ -1,0 +1,258 @@
+{
+  "generated_at": "2026-03-08T18:01:36.863271Z",
+  "columns": [
+    "2026-03-01-freshco",
+    "2026-03-08-freshco"
+  ],
+  "rows": [
+    {
+      "name": "Apples Ambrosia 3lbs",
+      "url": "https://www.freshco.com/products/apples-ambrosia-1%252E36-kg",
+      "prices": [
+        {
+          "value": 6.49,
+          "weight_g": 1262.7181688125895,
+          "per_100g": 0.5139705882352941
+        },
+        {
+          "value": 5.99,
+          "weight_g": 1165.436337625179,
+          "per_100g": 0.5139705882352941
+        }
+      ]
+    },
+    {
+      "name": "Avocados",
+      "prices": [
+        {
+          "value": 2.99
+        },
+        {
+          "value": 2.58
+        }
+      ]
+    },
+    {
+      "name": "Beans French Green",
+      "prices": [
+        {
+          "value": 3.49
+        },
+        {
+          "value": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Bell Peppers 4Pk",
+      "prices": [
+        {
+          "value": 7.49
+        },
+        {
+          "value": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Bread 12 Grain 600G",
+      "prices": [
+        {
+          "value": 4.49
+        },
+        {
+          "value": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Bread WG 600G",
+      "prices": [
+        {
+          "value": 3.69
+        },
+        {
+          "value": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Broccoli",
+      "prices": [
+        {
+          "value": 4.19
+        },
+        {
+          "value": 4.49
+        }
+      ]
+    },
+    {
+      "name": "Cheerios Cereal",
+      "prices": [
+        {
+          "value": 5.97
+        },
+        {
+          "value": 5.47
+        }
+      ]
+    },
+    {
+      "name": "Cooking Wine",
+      "prices": [
+        {
+          "value": 3.29
+        },
+        {
+          "value": 2.99
+        }
+      ]
+    },
+    {
+      "name": "Frzn Vegetables Mixd",
+      "prices": [
+        {
+          "value": 2.69
+        },
+        {
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "Havarti W/Grdn Veg",
+      "prices": [
+        {
+          "value": 4.49
+        },
+        {
+          "value": 4.99
+        }
+      ]
+    },
+    {
+      "name": "Milk Homo",
+      "prices": [
+        {
+          "value": 7.99
+        },
+        {
+          "value": 7.49
+        }
+      ]
+    },
+    {
+      "name": "Oreo Double Stuf",
+      "prices": [
+        {
+          "value": 4.49
+        },
+        {
+          "value": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Pepper Bell Yell Swt",
+      "url": "https://www.freshco.com/products/yellow-bell-peppers",
+      "prices": [
+        {
+          "value": 2.89
+        },
+        {
+          "value": 2.42
+        }
+      ]
+    },
+    {
+      "name": "Potato Sweet Orange",
+      "url": "https://www.freshco.com/products/orange-flesh-yams-sweet-potato-",
+      "prices": [
+        {
+          "value": 1.79
+        },
+        {
+          "value": 2.14
+        }
+      ]
+    },
+    {
+      "name": "Rice Brown Natural",
+      "prices": [
+        {
+          "value": 4.99
+        },
+        {
+          "value": 5.49
+        }
+      ]
+    },
+    {
+      "name": "Sauce GS Parmesn Rom",
+      "prices": [
+        {
+          "value": 2.79
+        },
+        {
+          "value": 2.99
+        }
+      ]
+    },
+    {
+      "name": "Strawberries 1lb",
+      "prices": [
+        {
+          "value": 1.99
+        },
+        {
+          "value": 2.44
+        }
+      ]
+    },
+    {
+      "name": "Tipiak Couscous",
+      "prices": [
+        {
+          "value": 10.49
+        },
+        {
+          "value": 10.99
+        }
+      ]
+    },
+    {
+      "name": "Tofu Smoked Original",
+      "prices": [
+        {
+          "value": 4.29
+        },
+        {
+          "value": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Ultimate Lemon Creme",
+      "prices": [
+        {
+          "value": 2.49
+        },
+        {
+          "value": 2.79
+        }
+      ]
+    },
+    {
+      "name": "Zucchini Squash",
+      "prices": [
+        {
+          "value": 3.29
+        },
+        {
+          "value": 3.54
+        }
+      ]
+    }
+  ]
+}
