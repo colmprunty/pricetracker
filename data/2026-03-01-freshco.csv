@@ -1,23 +1,23 @@
-name,price
-Broccoli,4.19
-Pepper Bell Yell Swt,2.89
-Zucchini Squash,3.29
-Beans French Green,3.49
-Bell Peppers 4Pk,7.49
-Strawberries 1lb,1.99
-Tofu Smoked Original,4.29
-Potato Sweet Orange,1.79
-Avocados,2.99
-Havarti W/Grdn Veg,4.49
-Oreo Double Stuf,4.49
-Frzn Vegetables Mixd,2.69
-Milk Homo,7.99
-Bread WG 600G,3.69
-Ultimate Lemon Creme,2.49
-Bread 12 Grain 600G,4.49
-Cooking Wine,3.29
-Sauce GS Parmesn Rom,2.79
-Rice Brown Natural,4.99
-Cheerios Cereal,5.97
-Tipiak Couscous,10.49
-Apples Ambrosia 3lbs,6.49
+item,price,weight,per_100g
+Broccoli,4.19,,
+Pepper Bell Yell Swt,2.89,,1.10
+Zucchini Squash,3.29,,
+Beans French Green,3.49,,
+Bell Peppers 4Pk,7.49,,
+Strawberries 1lb,1.99,,
+Tofu Smoked Original,4.29,,
+Potato Sweet Orange,1.79,,0.96
+Avocados,2.99,,
+Havarti W/Grdn Veg,4.49,,
+Oreo Double Stuf,4.49,,
+Frzn Vegetables Mixd,2.69,,
+Milk Homo,7.99,,
+Bread WG 600G,3.69,,
+Ultimate Lemon Creme,2.49,,
+Bread 12 Grain 600G,4.49,,
+Cooking Wine,3.29,,
+Sauce GS Parmesn Rom,2.79,,
+Rice Brown Natural,4.99,,
+Cheerios Cereal,5.97,,
+Tipiak Couscous,10.49,,
+Apples Ambrosia 3lbs,6.49,,0.44

@@ -1,5 +1,5 @@
 module github.com/colmprunty/pricetracker
 
-go 1.23.0
+go 1.24
 
-require github.com/a-h/templ v0.3.1001 // indirect
+require github.com/a-h/templ v0.3.1001

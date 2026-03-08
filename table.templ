@@ -16,8 +16,6 @@ templ tablePage(table UITable) {
 				.decreased { background-color: #d1e7dd; }
 				.missing { background-color: #e9ecef; color: #6c757d; }
 				.sub { font-size: 0.75em; color: #555; margin-top: 2px; }
-				a { color: inherit; text-decoration: none; border-bottom: 1px dotted #999; }
-				a:hover { border-bottom-color: #333; }
 			</style>
 		</head>
 		<body>
@@ -34,13 +32,7 @@ templ tablePage(table UITable) {
 				<tbody>
 					for _, row := range table.Rows {
 						<tr>
-							<td>
-								if row.URL != "" {
-									<a href={ templ.URL(row.URL) } target="_blank">{ row.Name }</a>
-								} else {
-									{ row.Name }
-								}
-							</td>
+							<td>{ row.Name }</td>
 							for _, cell := range row.Cells {
 								if cell.Value == "" {
 									<td class="missing">—</td>

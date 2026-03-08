@@ -1,20 +1,49 @@
 # PriceTracker
 
-A lightweight Go API that reads CSV price files and serves a pivot table as JSON.
+A Go app that tracks grocery prices over time. CSV files are processed into a JSON store and displayed as a colour-coded HTML table showing price changes week to week.
 
 ## Requirements
 
-- [Go 1.20+](https://go.dev/dl/)
+- [Go 1.24+](https://go.dev/dl/)
+- [templ](https://github.com/a-h/templ) (for regenerating the HTML template)
 
 ## Getting Started
 
 ```bash
 git clone <repo-url>
 cd PriceTracker
-go run main.go
+go run . process   # process CSVs into data/prices.json
+go run .           # start the server
 ```
 
 The server starts on port `8080` by default.
+
+## Adding Price Data
+
+Drop `.csv` files into `data/` using the naming convention:
+
+```
+YYYY-MM-DD-storename.csv
+```
+
+Each file must have `item` (or `name`) and `price` columns. `weight` (kg) and `per_100g` ($/100g) are optional:
+
+```csv
+item,price,weight,per_100g
+Broccoli,4.49,,
+Pepper Bell Yell Swt,2.42,0.220,1.10
+Milk,7.49,,
+```
+
+All values are plain numbers — no `$` or unit suffixes. Weight is always in kg.
+
+Then run `process` to merge new files into `data/prices.json`:
+
+```bash
+go run . process
+```
+
+Only new CSVs (not already in `prices.json`) are processed — existing data is preserved.
 
 ## Configuration
 
@@ -22,76 +51,31 @@ The server starts on port `8080` by default.
 |----------|---------|-------------|
 | `PORT`   | `8080`  | Port the server listens on |
 
-```bash
-PORT=9090 go run main.go
-```
+## Endpoints
 
-## Adding Price Data
+### `GET /`
 
-Drop `.csv` files into the `data/` directory using the naming convention:
-
-```
-YYYY-MM-DD-storename.csv
-```
-
-Append `-1`, `-2`, etc. for multiple trips on the same day:
-
-```
-data/
-├── 2024-01-08-tesco.csv
-├── 2024-01-15-lidl.csv
-└── 2024-01-15-tesco.csv
-```
-
-Each file must have `name` and `price` as its first two columns (case-insensitive):
-
-```csv
-name,price
-Milk,3.99
-Bread,2.50
-```
-
-Files are sorted alphabetically — the ISO date prefix guarantees chronological column order.
-
-## API
-
-### `GET /health`
-
-```bash
-curl http://localhost:8080/health
-```
-
-```json
-{"status": "ok"}
-```
-
----
+HTML table showing all products across all shopping trips. Cells are colour-coded: red for price increases, green for price decreases vs the previous trip. Weight and price per 100g are shown where available.
 
 ### `GET /prices`
 
-Returns a pivot table. Each row is a product; each column is a shopping trip (filename without `.csv`). Missing prices are `null`.
+Raw pivot table as JSON. Each row is a product; each column is a shopping trip.
 
 ```bash
 curl http://localhost:8080/prices
 ```
 
-```json
-{
-  "columns": ["2024-01-08-tesco", "2024-01-15-lidl", "2024-01-15-tesco"],
-  "rows": [
-    { "name": "Bread",  "prices": ["2.50", "1.99", "2.50"] },
-    { "name": "Butter", "prices": ["2.75", null,   null]   },
-    { "name": "Cheese", "prices": [null,   "4.99",  "5.99"] },
-    { "name": "Eggs",   "prices": ["3.25", null,   "3.40"] },
-    { "name": "Milk",   "prices": ["3.99", "3.79",  "4.25"] },
-    { "name": "Yoghurt","prices": [null,   "1.25",  null]   }
-  ]
-}
+### `GET /health`
+
+```bash
+curl http://localhost:8080/health
+# {"status":"ok"}
 ```
 
 ## Build
 
 ```bash
 go build -o pricetracker .
+./pricetracker process
 ./pricetracker
 ```
