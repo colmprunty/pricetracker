@@ -1,6 +1,9 @@
 # Binary
 pricetracker
 
+# Data
+*.csv
+
 # Environment
 .env
 

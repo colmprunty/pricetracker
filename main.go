@@ -4,12 +4,10 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
-	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -17,7 +15,7 @@ import (
 )
 
 const (
-	dataDir       = "./data"
+	dataDir        = "./data"
 	pricesDataFile = "./data/prices.json"
 )
 
@@ -44,7 +42,6 @@ type PriceCell struct {
 
 type PriceRow struct {
 	Name   string       `json:"name"`
-	URL    string       `json:"url,omitempty"`
 	Prices []*PriceCell `json:"prices"` // nil element = item not in that trip
 }
 
@@ -65,150 +62,34 @@ const (
 type UICell struct {
 	Value   string     // "$4.49" or "" if missing
 	Colour  CellColour
-	Per100g string     // "$0.44" or "" if not calculable
-	WeightG string     // "223g" back-calculated from price/rate, or ""
+	Per100g string // "$0.44" or ""
+	WeightG string // "223g" or ""
 }
 
 type UIRow struct {
 	Name  string
-	URL   string // product page, may be empty
 	Cells []UICell
 }
 
 type UITable struct {
 	Columns       []string
-	ColumnColours []string // CSS background color for each column header
+	ColumnColours []string
 	Rows          []UIRow
 }
 
-type ProductMeta struct {
-	URL string `json:"url"`
-}
-
 type CSVRow struct {
-	Price string
-}
-
-const productsFile = "./products.json"
-
-func loadProductMeta() (map[string]ProductMeta, error) {
-	data, err := os.ReadFile(productsFile)
-	if err != nil {
-		if os.IsNotExist(err) {
-			return map[string]ProductMeta{}, nil
-		}
-		return nil, err
-	}
-	var m map[string]ProductMeta
-	if err := json.Unmarshal(data, &m); err != nil {
-		return nil, fmt.Errorf("parse %s: %w", productsFile, err)
-	}
-	return m, nil
-}
-
-var (
-	reLDJSON       = regexp.MustCompile(`(?s)<script[^>]+type=["']application/ld\+json["'][^>]*>(.*?)</script>`)
-	reWeightInName = regexp.MustCompile(`(\d+\.?\d*)\s*(kg|g)\b`)
-	rePer100g      = regexp.MustCompile(`\$\s*(\d+\.?\d*)\s*per\s*100\s*g`)
-)
-
-// fetchPer100g fetches the product page and calculates price per 100g from
-// JSON-LD structured data. Returns nil if it cannot be determined.
-func fetchPer100g(productURL string) (*float64, error) {
-	client := &http.Client{Timeout: 10 * time.Second}
-	req, err := http.NewRequest(http.MethodGet, productURL, nil)
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
-
-	resp, err := client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	// Strategy 1: look for an explicit "$ X per 100g" string in the page.
-	if m := rePer100g.FindSubmatch(body); m != nil {
-		if rate, err := strconv.ParseFloat(string(m[1]), 64); err == nil && rate > 0 {
-			return &rate, nil
-		}
-	}
-
-	// Strategy 2: JSON-LD — price + weight in product name.
-	for _, m := range reLDJSON.FindAllSubmatch(body, -1) {
-		var obj map[string]any
-		if err := json.Unmarshal(m[1], &obj); err != nil {
-			continue
-		}
-		if typ, _ := obj["@type"].(string); typ != "Product" {
-			continue
-		}
-
-		// Extract the listed price from offers.
-		offers, _ := obj["offers"].(map[string]any)
-		if offers == nil {
-			continue
-		}
-		var price float64
-		switch v := offers["price"].(type) {
-		case float64:
-			price = v
-		case string:
-			price, err = strconv.ParseFloat(v, 64)
-			if err != nil || price <= 0 {
-				continue
-			}
-		default:
-			continue
-		}
-
-		// Extract weight from the product name, e.g. "Apples Ambrosia 1.36 kg".
-		name, _ := obj["name"].(string)
-		m := reWeightInName.FindStringSubmatch(strings.ToLower(name))
-		if m == nil {
-			continue
-		}
-		weightVal, err := strconv.ParseFloat(m[1], 64)
-		if err != nil || weightVal <= 0 {
-			continue
-		}
-		weightG := weightVal
-		if m[2] == "kg" {
-			weightG *= 1000
-		}
-		per100g := price / weightG * 100
-		return &per100g, nil
-	}
-	return nil, nil
+	Price   string
+	Per100g string // optional, $/100g
+	WeightKg string // optional, kg
 }
 
 // processCSVs merges any new CSV files into prices.json.
 // Existing data is preserved; only unprocessed CSVs are added.
 func processCSVs() error {
-	// Load existing data (empty on first run).
 	var existing PricesData
 	if b, err := os.ReadFile(pricesDataFile); err == nil {
 		if err := json.Unmarshal(b, &existing); err != nil {
 			return fmt.Errorf("parse existing %s: %w", pricesDataFile, err)
-		}
-	}
-
-	meta, err := loadProductMeta()
-	if err != nil {
-		return err
-	}
-
-	// Update URLs on existing rows from products.json.
-	for i, row := range existing.Rows {
-		if pm, ok := meta[row.Name]; ok && pm.URL != "" {
-			existing.Rows[i].URL = pm.URL
 		}
 	}
 
@@ -245,46 +126,23 @@ func processCSVs() error {
 			return err
 		}
 
-		// Fetch per_100g from each product's URL (once per product per CSV).
-		per100g := make(map[string]*float64)
-		for name := range csvData {
-			url := meta[name].URL
-			if url == "" {
-				continue
-			}
-			rate, err := fetchPer100g(url)
-			if err != nil {
-				log.Printf("warn: fetch per_100g for %q: %v", name, err)
-				continue
-			}
-			if rate != nil {
-				log.Printf("  %s: $%.4f/100g", name, *rate)
-			} else {
-				log.Printf("  %s: per_100g not found on page", name)
-			}
-			per100g[name] = rate
-		}
-
 		colIdx := len(existing.Columns)
 		existing.Columns = append(existing.Columns, col)
 
-		// Extend existing rows with this week's price (or nil if not in CSV).
 		seen := make(map[string]bool, len(existing.Rows))
 		for i, row := range existing.Rows {
 			seen[row.Name] = true
-			existing.Rows[i].Prices = append(existing.Rows[i].Prices, makeCell(csvData[row.Name], per100g[row.Name]))
+			existing.Rows[i].Prices = append(existing.Rows[i].Prices, makeCell(csvData[row.Name]))
 		}
 
-		// Add new rows for products that weren't in any previous trip.
 		var newRows []PriceRow
 		for name, csvRow := range csvData {
 			if seen[name] {
 				continue
 			}
-			prices := make([]*PriceCell, colIdx+1) // nils for all prior columns
-			prices[colIdx] = makeCell(csvRow, per100g[name])
-			pm := meta[name]
-			newRows = append(newRows, PriceRow{Name: name, URL: pm.URL, Prices: prices})
+			prices := make([]*PriceCell, colIdx+1)
+			prices[colIdx] = makeCell(csvRow)
+			newRows = append(newRows, PriceRow{Name: name, Prices: prices})
 		}
 		sort.Slice(newRows, func(i, j int) bool { return newRows[i].Name < newRows[j].Name })
 		existing.Rows = append(existing.Rows, newRows...)
@@ -302,9 +160,10 @@ func processCSVs() error {
 	return os.WriteFile(pricesDataFile, b, 0644)
 }
 
-// makeCell builds a PriceCell from a CSVRow and an optional per-100g rate
-// fetched from the product's website. Returns nil if the price is missing.
-func makeCell(row CSVRow, per100g *float64) *PriceCell {
+// makeCell builds a PriceCell from a CSVRow.
+// per_100g and weight are optional; if both are absent the cell has no unit-price data.
+// If only one is provided the other is back-calculated. Weight is in kg; stored as grams.
+func makeCell(row CSVRow) *PriceCell {
 	if row.Price == "" {
 		return nil
 	}
@@ -313,12 +172,37 @@ func makeCell(row CSVRow, per100g *float64) *PriceCell {
 		return nil
 	}
 	cell := &PriceCell{Value: price}
-	if per100g != nil && *per100g > 0 {
-		wg := price / *per100g * 100
+
+	per100g, hasRate := parseOptional(row.Per100g)
+	weightKg, hasWeight := parseOptional(row.WeightKg)
+
+	switch {
+	case hasRate && hasWeight:
+		cell.Per100g = &per100g
+		wg := weightKg * 1000
 		cell.WeightG = &wg
-		cell.Per100g = per100g
+	case hasRate:
+		cell.Per100g = &per100g
+		wg := price / per100g * 100
+		cell.WeightG = &wg
+	case hasWeight:
+		wg := weightKg * 1000
+		cell.WeightG = &wg
+		r := price / wg * 100
+		cell.Per100g = &r
 	}
 	return cell
+}
+
+func parseOptional(s string) (float64, bool) {
+	if s == "" {
+		return 0, false
+	}
+	v, err := strconv.ParseFloat(strings.TrimSpace(s), 64)
+	if err != nil || v <= 0 {
+		return 0, false
+	}
+	return v, true
 }
 
 func loadPricesData() (PricesData, error) {
@@ -335,7 +219,6 @@ func loadPricesData() (PricesData, error) {
 
 // formatColumn turns "2026-03-01-freshco" into "Mar 1, 2026 – Freshco".
 func formatColumn(col string) string {
-	// Expected format: YYYY-MM-DD-<store>
 	parts := strings.SplitN(col, "-", 4)
 	if len(parts) != 4 {
 		return col
@@ -376,8 +259,7 @@ func buildUITable() (UITable, error) {
 			f := p.Value
 			prevFloat = &f
 
-			per100g := ""
-			weightG := ""
+			per100g, weightG := "", ""
 			if p.Per100g != nil {
 				per100g = fmt.Sprintf("$%.2f", *p.Per100g)
 			}
@@ -386,7 +268,7 @@ func buildUITable() (UITable, error) {
 			}
 			cells[j] = UICell{Value: fmt.Sprintf("$%.2f", p.Value), Colour: colour, Per100g: per100g, WeightG: weightG}
 		}
-		rows[i] = UIRow{Name: row.Name, URL: row.URL, Cells: cells}
+		rows[i] = UIRow{Name: row.Name, Cells: cells}
 	}
 
 	columns := make([]string, len(data.Columns))
@@ -398,7 +280,9 @@ func buildUITable() (UITable, error) {
 	return UITable{Columns: columns, ColumnColours: colours, Rows: rows}, nil
 }
 
-// readCSVFile parses a CSV file with "name" and "price" columns.
+// readCSVFile parses a CSV with required "name"/"item" and "price" columns,
+// and optional "per_100g" and "weight" columns. All values are plain numbers.
+// Weight is in kg. Prices and rates have no currency symbol.
 func readCSVFile(path string) (map[string]CSVRow, error) {
 	f, err := os.Open(path)
 	if err != nil {
@@ -415,17 +299,21 @@ func readCSVFile(path string) (map[string]CSVRow, error) {
 		return map[string]CSVRow{}, nil
 	}
 
-	nameIdx, priceIdx := -1, -1
+	nameIdx, priceIdx, per100gIdx, weightIdx := -1, -1, -1, -1
 	for i, h := range records[0] {
 		switch strings.ToLower(strings.TrimSpace(h)) {
-		case "name":
+		case "name", "item":
 			nameIdx = i
 		case "price":
 			priceIdx = i
+		case "per_100g":
+			per100gIdx = i
+		case "weight":
+			weightIdx = i
 		}
 	}
 	if nameIdx == -1 || priceIdx == -1 {
-		return nil, fmt.Errorf("%s: missing required columns 'name' and 'price'", filepath.Base(path))
+		return nil, fmt.Errorf("%s: missing required columns 'name'/'item' and 'price'", filepath.Base(path))
 	}
 
 	rows := make(map[string]CSVRow, len(records)-1)
@@ -433,19 +321,25 @@ func readCSVFile(path string) (map[string]CSVRow, error) {
 		if len(rec) <= priceIdx {
 			continue
 		}
-		rows[strings.TrimSpace(rec[nameIdx])] = CSVRow{Price: strings.TrimSpace(rec[priceIdx])}
+		row := CSVRow{Price: strings.TrimSpace(rec[priceIdx])}
+		if per100gIdx >= 0 && per100gIdx < len(rec) {
+			row.Per100g = strings.TrimSpace(rec[per100gIdx])
+		}
+		if weightIdx >= 0 && weightIdx < len(rec) {
+			row.WeightKg = strings.TrimSpace(rec[weightIdx])
+		}
+		rows[strings.TrimSpace(rec[nameIdx])] = row
 	}
 	return rows, nil
 }
 
-// buildTable reads all CSV files in dir and returns a pivot TableResponse.
+// buildTable reads all CSV files and returns a pivot TableResponse for /prices.
 func buildTable(dir string) (TableResponse, error) {
 	entries, err := os.ReadDir(dir)
 	if err != nil {
 		return TableResponse{}, fmt.Errorf("read data directory: %w", err)
 	}
 
-	// Collect and sort CSV filenames alphabetically.
 	var files []string
 	for _, e := range entries {
 		if !e.IsDir() && strings.HasSuffix(strings.ToLower(e.Name()), ".csv") {
@@ -470,7 +364,6 @@ func buildTable(dir string) (TableResponse, error) {
 		}
 	}
 
-	// Collect and sort unique product names.
 	names := make([]string, 0, len(nameSet))
 	for name := range nameSet {
 		names = append(names, name)
@@ -505,14 +398,12 @@ func pricesHandler(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusMethodNotAllowed, ErrorResponse{Error: "method not allowed"})
 		return
 	}
-
 	table, err := buildTable(dataDir)
 	if err != nil {
 		log.Printf("build table: %v", err)
 		writeJSON(w, http.StatusInternalServerError, ErrorResponse{Error: err.Error()})
 		return
 	}
-
 	writeJSON(w, http.StatusOK, table)
 }
 
@@ -521,14 +412,12 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
-
 	table, err := buildUITable()
 	if err != nil {
 		log.Printf("build UI table: %v", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	if err := tablePage(table).Render(r.Context(), w); err != nil {
 		log.Printf("render template: %v", err)

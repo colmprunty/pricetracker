@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08T18:01:36.863271Z",
+  "generated_at": "2026-03-08T20:53:58.642118Z",
   "columns": [
     "2026-03-01-freshco",
     "2026-03-08-freshco"
@@ -11,13 +11,11 @@
       "prices": [
         {
           "value": 6.49,
-          "weight_g": 1262.7181688125895,
-          "per_100g": 0.5139705882352941
+          "weight_g": 1475,
+          "per_100g": 0.44
         },
         {
-          "value": 5.99,
-          "weight_g": 1165.436337625179,
-          "per_100g": 0.5139705882352941
+          "value": 5.99
         }
       ]
     },
@@ -158,10 +156,14 @@
       "url": "https://www.freshco.com/products/yellow-bell-peppers",
       "prices": [
         {
-          "value": 2.89
+          "value": 2.89,
+          "weight_g": 262.7272727272727,
+          "per_100g": 1.1
         },
         {
-          "value": 2.42
+          "value": 2.42,
+          "weight_g": 220,
+          "per_100g": 1.1
         }
       ]
     },
@@ -170,10 +172,14 @@
       "url": "https://www.freshco.com/products/orange-flesh-yams-sweet-potato-",
       "prices": [
         {
-          "value": 1.79
+          "value": 1.79,
+          "weight_g": 186.45833333333334,
+          "per_100g": 0.96
         },
         {
-          "value": 2.14
+          "value": 2.14,
+          "weight_g": 755,
+          "per_100g": 0.28
         }
       ]
     },
@@ -250,7 +256,9 @@
           "value": 3.29
         },
         {
-          "value": 3.54
+          "value": 3.54,
+          "weight_g": 460,
+          "per_100g": 0.77
         }
       ]
     }
