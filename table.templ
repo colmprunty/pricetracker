@@ -39,6 +39,9 @@ templ tablePage(table UITable) {
 								} else if cell.Colour == CellIncreased {
 									<td class="increased">
 										{ cell.Value }
+										if cell.Discounted != "" {
+											<div class="sub">discounted to { cell.Discounted }</div>
+										}
 										if cell.WeightG != "" || cell.Per100g != "" {
 											<div class="sub">{ cell.WeightG } · { cell.Per100g }/100g</div>
 										}
@@ -46,6 +49,9 @@ templ tablePage(table UITable) {
 								} else if cell.Colour == CellDecreased {
 									<td class="decreased">
 										{ cell.Value }
+										if cell.Discounted != "" {
+											<div class="sub">discounted to { cell.Discounted }</div>
+										}
 										if cell.WeightG != "" || cell.Per100g != "" {
 											<div class="sub">{ cell.WeightG } · { cell.Per100g }/100g</div>
 										}
@@ -53,6 +59,9 @@ templ tablePage(table UITable) {
 								} else {
 									<td>
 										{ cell.Value }
+										if cell.Discounted != "" {
+											<div class="sub">discounted to { cell.Discounted }</div>
+										}
 										if cell.WeightG != "" || cell.Per100g != "" {
 											<div class="sub">{ cell.WeightG } · { cell.Per100g }/100g</div>
 										}
