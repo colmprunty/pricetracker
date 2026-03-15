@@ -35,9 +35,10 @@ type ErrorResponse struct {
 
 // PriceCell is one entry in the processed prices.json file.
 type PriceCell struct {
-	Value   float64  `json:"value"`
-	WeightG *float64 `json:"weight_g,omitempty"`
-	Per100g *float64 `json:"per_100g,omitempty"`
+	Value         float64  `json:"value"`
+	WeightG       *float64 `json:"weight_g,omitempty"`
+	Per100g       *float64 `json:"per_100g,omitempty"`
+	DiscountPrice *float64 `json:"discount_price,omitempty"`
 }
 
 type PriceRow struct {
@@ -60,10 +61,11 @@ const (
 )
 
 type UICell struct {
-	Value   string     // "$4.49" or "" if missing
-	Colour  CellColour
-	Per100g string // "$0.44" or ""
-	WeightG string // "223g" or ""
+	Value      string     // "$4.49" or "" if missing
+	Colour     CellColour
+	Per100g    string // "$0.44" or ""
+	WeightG    string // "223g" or ""
+	Discounted string // "discounted to $x.xx" or ""
 }
 
 type UIRow struct {
@@ -78,9 +80,10 @@ type UITable struct {
 }
 
 type CSVRow struct {
-	Price   string
-	Per100g string // optional, $/100g
-	WeightKg string // optional, kg
+	Price         string
+	Per100g       string // optional, $/100g
+	WeightKg      string // optional, kg
+	DiscountPrice string // optional, discounted price
 }
 
 // processCSVs merges any new CSV files into prices.json.
@@ -191,6 +194,9 @@ func makeCell(row CSVRow) *PriceCell {
 		r := price / wg * 100
 		cell.Per100g = &r
 	}
+	if dp, ok := parseOptional(row.DiscountPrice); ok {
+		cell.DiscountPrice = &dp
+	}
 	return cell
 }
 
@@ -242,22 +248,33 @@ func buildUITable() (UITable, error) {
 	rows := make([]UIRow, len(data.Rows))
 	for i, row := range data.Rows {
 		cells := make([]UICell, len(row.Prices))
-		var prevFloat *float64
+		var prevPer100g *float64
+		var prevValue *float64
 		for j, p := range row.Prices {
 			if p == nil {
 				cells[j] = UICell{Colour: CellNeutral}
 				continue
 			}
 			colour := CellNeutral
-			if prevFloat != nil {
-				if p.Value > *prevFloat {
+			if p.Per100g != nil && prevPer100g != nil {
+				if *p.Per100g > *prevPer100g {
 					colour = CellIncreased
-				} else if p.Value < *prevFloat {
+				} else if *p.Per100g < *prevPer100g {
+					colour = CellDecreased
+				}
+			} else if p.Per100g == nil && prevValue != nil {
+				if p.Value > *prevValue {
+					colour = CellIncreased
+				} else if p.Value < *prevValue {
 					colour = CellDecreased
 				}
 			}
-			f := p.Value
-			prevFloat = &f
+			if p.Per100g != nil {
+				v := *p.Per100g
+				prevPer100g = &v
+			}
+			v := p.Value
+			prevValue = &v
 
 			per100g, weightG := "", ""
 			if p.Per100g != nil {
@@ -266,7 +283,11 @@ func buildUITable() (UITable, error) {
 			if p.WeightG != nil {
 				weightG = fmt.Sprintf("%.0fg", *p.WeightG)
 			}
-			cells[j] = UICell{Value: fmt.Sprintf("$%.2f", p.Value), Colour: colour, Per100g: per100g, WeightG: weightG}
+			discounted := ""
+			if p.DiscountPrice != nil {
+				discounted = fmt.Sprintf("$%.2f", *p.DiscountPrice)
+			}
+			cells[j] = UICell{Value: fmt.Sprintf("$%.2f", p.Value), Colour: colour, Per100g: per100g, WeightG: weightG, Discounted: discounted}
 		}
 		rows[i] = UIRow{Name: row.Name, Cells: cells}
 	}
@@ -299,7 +320,7 @@ func readCSVFile(path string) (map[string]CSVRow, error) {
 		return map[string]CSVRow{}, nil
 	}
 
-	nameIdx, priceIdx, per100gIdx, weightIdx := -1, -1, -1, -1
+	nameIdx, priceIdx, per100gIdx, weightIdx, discountIdx := -1, -1, -1, -1, -1
 	for i, h := range records[0] {
 		switch strings.ToLower(strings.TrimSpace(h)) {
 		case "name", "item":
@@ -310,6 +331,8 @@ func readCSVFile(path string) (map[string]CSVRow, error) {
 			per100gIdx = i
 		case "weight":
 			weightIdx = i
+		case "discount_price":
+			discountIdx = i
 		}
 	}
 	if nameIdx == -1 || priceIdx == -1 {
@@ -327,6 +350,9 @@ func readCSVFile(path string) (map[string]CSVRow, error) {
 		}
 		if weightIdx >= 0 && weightIdx < len(rec) {
 			row.WeightKg = strings.TrimSpace(rec[weightIdx])
+		}
+		if discountIdx >= 0 && discountIdx < len(rec) {
+			row.DiscountPrice = strings.TrimSpace(rec[discountIdx])
 		}
 		rows[strings.TrimSpace(rec[nameIdx])] = row
 	}

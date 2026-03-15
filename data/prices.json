@@ -1,32 +1,37 @@
 {
-  "generated_at": "2026-03-08T20:53:58.642118Z",
+  "generated_at": "2026-03-15T21:03:53.281245Z",
   "columns": [
-    "2026-03-01-freshco",
-    "2026-03-08-freshco"
+    "2026-03-08-freshco",
+    "2026-03-15-freshco"
   ],
   "rows": [
     {
+      "name": "Ambrosia",
+      "prices": [
+        null,
+        {
+          "value": 4.99
+        }
+      ]
+    },
+    {
       "name": "Apples Ambrosia 3lbs",
-      "url": "https://www.freshco.com/products/apples-ambrosia-1%252E36-kg",
       "prices": [
         {
-          "value": 6.49,
-          "weight_g": 1475,
-          "per_100g": 0.44
-        },
-        {
           "value": 5.99
-        }
+        },
+        null
       ]
     },
     {
       "name": "Avocados",
       "prices": [
         {
-          "value": 2.99
+          "value": 1.49,
+          "discount_price": 1.29
         },
         {
-          "value": 2.58
+          "value": 1.79
         }
       ]
     },
@@ -34,10 +39,11 @@
       "name": "Beans French Green",
       "prices": [
         {
-          "value": 3.49
+          "value": 4.99,
+          "discount_price": 3.99
         },
         {
-          "value": 3.99
+          "value": 4.99
         }
       ]
     },
@@ -45,10 +51,18 @@
       "name": "Bell Peppers 4Pk",
       "prices": [
         {
-          "value": 7.49
-        },
-        {
           "value": 6.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "Blackberries",
+      "prices": [
+        null,
+        {
+          "value": 4.49,
+          "discount_price": 3.99
         }
       ]
     },
@@ -56,10 +70,11 @@
       "name": "Bread 12 Grain 600G",
       "prices": [
         {
-          "value": 4.49
+          "value": 3.99
         },
         {
-          "value": 3.99
+          "value": 3.99,
+          "discount_price": 2.77
         }
       ]
     },
@@ -67,10 +82,11 @@
       "name": "Bread WG 600G",
       "prices": [
         {
-          "value": 3.69
+          "value": 3.99
         },
         {
-          "value": 3.99
+          "value": 3.99,
+          "discount_price": 2.77
         }
       ]
     },
@@ -78,10 +94,29 @@
       "name": "Broccoli",
       "prices": [
         {
-          "value": 4.19
+          "value": 4.49
         },
         {
-          "value": 4.49
+          "value": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Chckn Strips Flly Ck",
+      "prices": [
+        null,
+        {
+          "value": 14.99
+        }
+      ]
+    },
+    {
+      "name": "Cheerios Apple Cinna",
+      "prices": [
+        null,
+        {
+          "value": 6.99,
+          "discount_price": 5.47
         }
       ]
     },
@@ -89,10 +124,55 @@
       "name": "Cheerios Cereal",
       "prices": [
         {
-          "value": 5.97
+          "value": 6.99,
+          "discount_price": 5.47
         },
+        null
+      ]
+    },
+    {
+      "name": "Cheese Halloumi",
+      "prices": [
+        null,
         {
-          "value": 5.47
+          "value": 6.49
+        }
+      ]
+    },
+    {
+      "name": "Chwy Nt Grn Brs DrkC",
+      "prices": [
+        null,
+        {
+          "value": 7.99
+        }
+      ]
+    },
+    {
+      "name": "Clem/Mand 3lbs",
+      "prices": [
+        null,
+        {
+          "value": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Coconut Milk",
+      "prices": [
+        null,
+        {
+          "value": 2.49,
+          "discount_price": 2.29
+        }
+      ]
+    },
+    {
+      "name": "Conditionr Smth/Slky",
+      "prices": [
+        null,
+        {
+          "value": 8.99
         }
       ]
     },
@@ -100,10 +180,17 @@
       "name": "Cooking Wine",
       "prices": [
         {
-          "value": 3.29
-        },
-        {
           "value": 2.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "Crkr Shelly Senbei",
+      "prices": [
+        null,
+        {
+          "value": 3.99
         }
       ]
     },
@@ -111,10 +198,27 @@
       "name": "Frzn Vegetables Mixd",
       "prices": [
         {
-          "value": 2.69
-        },
-        {
           "value": 3
+        },
+        null
+      ]
+    },
+    {
+      "name": "Fusilli",
+      "prices": [
+        null,
+        {
+          "value": 2.99
+        }
+      ]
+    },
+    {
+      "name": "Ham Blk/Frst Shvd",
+      "prices": [
+        null,
+        {
+          "value": 14.99,
+          "discount_price": 11.99
         }
       ]
     },
@@ -122,10 +226,27 @@
       "name": "Havarti W/Grdn Veg",
       "prices": [
         {
-          "value": 4.49
+          "value": 6.99,
+          "discount_price": 4.99
         },
+        null
+      ]
+    },
+    {
+      "name": "Jam Raspberry 250ML",
+      "prices": [
+        null,
         {
-          "value": 4.99
+          "value": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Lemons Lrg",
+      "prices": [
+        null,
+        {
+          "value": 0.99
         }
       ]
     },
@@ -133,10 +254,26 @@
       "name": "Milk Homo",
       "prices": [
         {
-          "value": 7.99
-        },
-        {
           "value": 7.49
+        },
+        null
+      ]
+    },
+    {
+      "name": "Naan Original Mini",
+      "prices": [
+        null,
+        {
+          "value": 5
+        }
+      ]
+    },
+    {
+      "name": "Onions Red",
+      "prices": [
+        null,
+        {
+          "value": 4.99
         }
       ]
     },
@@ -144,53 +281,90 @@
       "name": "Oreo Double Stuf",
       "prices": [
         {
-          "value": 4.49
+          "value": 5.99,
+          "discount_price": 3.99
         },
+        null
+      ]
+    },
+    {
+      "name": "Penne Rigate",
+      "prices": [
+        null,
         {
-          "value": 3.99
+          "value": 2.99
+        }
+      ]
+    },
+    {
+      "name": "Pepper Bell Orng Swt",
+      "prices": [
+        null,
+        {
+          "value": 2.75,
+          "weight_g": 250,
+          "per_100g": 1.1
         }
       ]
     },
     {
       "name": "Pepper Bell Yell Swt",
-      "url": "https://www.freshco.com/products/yellow-bell-peppers",
       "prices": [
-        {
-          "value": 2.89,
-          "weight_g": 262.7272727272727,
-          "per_100g": 1.1
-        },
         {
           "value": 2.42,
           "weight_g": 220,
           "per_100g": 1.1
+        },
+        null
+      ]
+    },
+    {
+      "name": "Peppers Red",
+      "prices": [
+        null,
+        {
+          "value": 1.72,
+          "weight_g": 195,
+          "per_100g": 0.88
+        }
+      ]
+    },
+    {
+      "name": "Pesto Alla Genovese",
+      "prices": [
+        null,
+        {
+          "value": 3.29
         }
       ]
     },
     {
       "name": "Potato Sweet Orange",
-      "url": "https://www.freshco.com/products/orange-flesh-yams-sweet-potato-",
       "prices": [
         {
-          "value": 1.79,
-          "weight_g": 186.45833333333334,
-          "per_100g": 0.96
-        },
-        {
-          "value": 2.14,
+          "value": 2.47,
           "weight_g": 755,
-          "per_100g": 0.28
-        }
+          "per_100g": 0.28,
+          "discount_price": 2.14
+        },
+        null
       ]
     },
     {
       "name": "Rice Brown Natural",
       "prices": [
         {
-          "value": 4.99
-        },
-        {
           "value": 5.49
+        },
+        null
+      ]
+    },
+    {
+      "name": "Rolls Brioche Milk",
+      "prices": [
+        null,
+        {
+          "value": 6.49
         }
       ]
     },
@@ -198,10 +372,26 @@
       "name": "Sauce GS Parmesn Rom",
       "prices": [
         {
-          "value": 2.79
-        },
-        {
           "value": 2.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "Service Seafood Frzn",
+      "prices": [
+        null,
+        {
+          "value": 19.99
+        }
+      ]
+    },
+    {
+      "name": "Spinach Whole Leaf",
+      "prices": [
+        null,
+        {
+          "value": 2
         }
       ]
     },
@@ -209,29 +399,26 @@
       "name": "Strawberries 1lb",
       "prices": [
         {
-          "value": 1.99
+          "value": 5.99,
+          "discount_price": 2.44
         },
-        {
-          "value": 2.44
-        }
+        null
       ]
     },
     {
       "name": "Tipiak Couscous",
       "prices": [
         {
-          "value": 10.49
-        },
-        {
           "value": 10.99
-        }
+        },
+        null
       ]
     },
     {
       "name": "Tofu Smoked Original",
       "prices": [
         {
-          "value": 4.29
+          "value": 3.99
         },
         {
           "value": 3.99
@@ -239,25 +426,35 @@
       ]
     },
     {
+      "name": "Tomatos Diced No Slt",
+      "prices": [
+        null,
+        {
+          "value": 2.69
+        }
+      ]
+    },
+    {
       "name": "Ultimate Lemon Creme",
       "prices": [
         {
-          "value": 2.49
+          "value": 3.99,
+          "discount_price": 2.79
         },
-        {
-          "value": 2.79
-        }
+        null
       ]
     },
     {
       "name": "Zucchini Squash",
       "prices": [
         {
-          "value": 3.29
-        },
-        {
           "value": 3.54,
           "weight_g": 460,
+          "per_100g": 0.77
+        },
+        {
+          "value": 3.35,
+          "weight_g": 435,
           "per_100g": 0.77
         }
       ]
