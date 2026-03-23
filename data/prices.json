@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-03-15T21:03:53.281245Z",
+  "generated_at": "2026-03-23T23:38:00.538513Z",
   "columns": [
     "2026-03-08-freshco",
-    "2026-03-15-freshco"
+    "2026-03-15-freshco",
+    "2026-03-22-nofrills"
   ],
   "rows": [
     {
@@ -11,7 +12,8 @@
         null,
         {
           "value": 4.99
-        }
+        },
+        null
       ]
     },
     {
@@ -20,11 +22,12 @@
         {
           "value": 5.99
         },
+        null,
         null
       ]
     },
     {
-      "name": "Avocados",
+      "name": "Avocado",
       "prices": [
         {
           "value": 1.49,
@@ -32,18 +35,21 @@
         },
         {
           "value": 1.79
+        },
+        {
+          "value": 1.79
         }
       ]
     },
     {
-      "name": "Beans French Green",
+      "name": "Banana",
       "prices": [
+        null,
+        null,
         {
-          "value": 4.99,
-          "discount_price": 3.99
-        },
-        {
-          "value": 4.99
+          "value": 0.72,
+          "weight_g": 475,
+          "per_100g": 0.152
         }
       ]
     },
@@ -53,6 +59,7 @@
         {
           "value": 6.99
         },
+        null,
         null
       ]
     },
@@ -63,18 +70,9 @@
         {
           "value": 4.49,
           "discount_price": 3.99
-        }
-      ]
-    },
-    {
-      "name": "Bread 12 Grain 600G",
-      "prices": [
-        {
-          "value": 3.99
         },
         {
-          "value": 3.99,
-          "discount_price": 2.77
+          "value": 2.99
         }
       ]
     },
@@ -87,7 +85,8 @@
         {
           "value": 3.99,
           "discount_price": 2.77
-        }
+        },
+        null
       ]
     },
     {
@@ -98,6 +97,21 @@
         },
         {
           "value": 3.99
+        },
+        {
+          "value": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Butternut Squash",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 8.67,
+          "weight_g": 1580,
+          "per_100g": 0.549
         }
       ]
     },
@@ -107,7 +121,8 @@
         null,
         {
           "value": 14.99
-        }
+        },
+        null
       ]
     },
     {
@@ -117,7 +132,8 @@
         {
           "value": 6.99,
           "discount_price": 5.47
-        }
+        },
+        null
       ]
     },
     {
@@ -127,6 +143,7 @@
           "value": 6.99,
           "discount_price": 5.47
         },
+        null,
         null
       ]
     },
@@ -136,7 +153,8 @@
         null,
         {
           "value": 6.49
-        }
+        },
+        null
       ]
     },
     {
@@ -145,7 +163,8 @@
         null,
         {
           "value": 7.99
-        }
+        },
+        null
       ]
     },
     {
@@ -154,7 +173,8 @@
         null,
         {
           "value": 6.99
-        }
+        },
+        null
       ]
     },
     {
@@ -164,7 +184,8 @@
         {
           "value": 2.49,
           "discount_price": 2.29
-        }
+        },
+        null
       ]
     },
     {
@@ -173,7 +194,8 @@
         null,
         {
           "value": 8.99
-        }
+        },
+        null
       ]
     },
     {
@@ -182,6 +204,7 @@
         {
           "value": 2.99
         },
+        null,
         null
       ]
     },
@@ -191,6 +214,17 @@
         null,
         {
           "value": 3.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "Dozen Eggs",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 7.18
         }
       ]
     },
@@ -200,6 +234,7 @@
         {
           "value": 3
         },
+        null,
         null
       ]
     },
@@ -209,6 +244,24 @@
         null,
         {
           "value": 2.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "Green Beans",
+      "prices": [
+        {
+          "value": 4.99,
+          "discount_price": 3.99
+        },
+        {
+          "value": 4.99
+        },
+        {
+          "value": 5.37,
+          "weight_g": 610,
+          "per_100g": 0.88
         }
       ]
     },
@@ -219,7 +272,8 @@
         {
           "value": 14.99,
           "discount_price": 11.99
-        }
+        },
+        null
       ]
     },
     {
@@ -229,6 +283,7 @@
           "value": 6.99,
           "discount_price": 4.99
         },
+        null,
         null
       ]
     },
@@ -238,7 +293,8 @@
         null,
         {
           "value": 6.99
-        }
+        },
+        null
       ]
     },
     {
@@ -247,16 +303,40 @@
         null,
         {
           "value": 0.99
-        }
+        },
+        null
       ]
     },
     {
-      "name": "Milk Homo",
+      "name": "Milk 4l",
       "prices": [
         {
           "value": 7.49
         },
-        null
+        null,
+        {
+          "value": 7.45
+        }
+      ]
+    },
+    {
+      "name": "Mini Cucumbers",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 2.99
+        }
+      ]
+    },
+    {
+      "name": "Mixed Beans",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 1.79
+        }
       ]
     },
     {
@@ -265,6 +345,17 @@
         null,
         {
           "value": 5
+        },
+        null
+      ]
+    },
+    {
+      "name": "Old Cheddar",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 10
         }
       ]
     },
@@ -274,7 +365,8 @@
         null,
         {
           "value": 4.99
-        }
+        },
+        null
       ]
     },
     {
@@ -284,7 +376,38 @@
           "value": 5.99,
           "discount_price": 3.99
         },
+        null,
         null
+      ]
+    },
+    {
+      "name": "Oreo Double Stuf Small",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 2.79
+        }
+      ]
+    },
+    {
+      "name": "PC Brioche Hot Dog Buns",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 5
+        }
+      ]
+    },
+    {
+      "name": "PC Maple Syrup",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 5.5
+        }
       ]
     },
     {
@@ -293,7 +416,8 @@
         null,
         {
           "value": 2.99
-        }
+        },
+        null
       ]
     },
     {
@@ -304,29 +428,8 @@
           "value": 2.75,
           "weight_g": 250,
           "per_100g": 1.1
-        }
-      ]
-    },
-    {
-      "name": "Pepper Bell Yell Swt",
-      "prices": [
-        {
-          "value": 2.42,
-          "weight_g": 220,
-          "per_100g": 1.1
         },
         null
-      ]
-    },
-    {
-      "name": "Peppers Red",
-      "prices": [
-        null,
-        {
-          "value": 1.72,
-          "weight_g": 195,
-          "per_100g": 0.88
-        }
       ]
     },
     {
@@ -335,19 +438,44 @@
         null,
         {
           "value": 3.29
+        },
+        null
+      ]
+    },
+    {
+      "name": "Philadelphia Soft Plain",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 4
         }
       ]
     },
     {
-      "name": "Potato Sweet Orange",
+      "name": "Potatoes 10lb",
       "prices": [
+        null,
+        null,
         {
-          "value": 2.47,
-          "weight_g": 755,
-          "per_100g": 0.28,
-          "discount_price": 2.14
+          "value": 1.97
+        }
+      ]
+    },
+    {
+      "name": "Red Pepper",
+      "prices": [
+        null,
+        {
+          "value": 1.72,
+          "weight_g": 195,
+          "per_100g": 0.88
         },
-        null
+        {
+          "value": 1.63,
+          "weight_g": 185,
+          "per_100g": 0.88
+        }
       ]
     },
     {
@@ -356,6 +484,7 @@
         {
           "value": 5.49
         },
+        null,
         null
       ]
     },
@@ -365,7 +494,8 @@
         null,
         {
           "value": 6.49
-        }
+        },
+        null
       ]
     },
     {
@@ -374,6 +504,7 @@
         {
           "value": 2.99
         },
+        null,
         null
       ]
     },
@@ -383,7 +514,8 @@
         null,
         {
           "value": 19.99
-        }
+        },
+        null
       ]
     },
     {
@@ -392,6 +524,17 @@
         null,
         {
           "value": 2
+        },
+        null
+      ]
+    },
+    {
+      "name": "Stock",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 1.5
         }
       ]
     },
@@ -402,7 +545,27 @@
           "value": 5.99,
           "discount_price": 2.44
         },
-        null
+        null,
+        {
+          "value": 1.99
+        }
+      ]
+    },
+    {
+      "name": "Sweet Potato",
+      "prices": [
+        {
+          "value": 2.47,
+          "weight_g": 755,
+          "per_100g": 0.28,
+          "discount_price": 2.14
+        },
+        null,
+        {
+          "value": 2.69,
+          "weight_g": 820,
+          "per_100g": 0.328
+        }
       ]
     },
     {
@@ -411,7 +574,23 @@
         {
           "value": 10.99
         },
+        null,
         null
+      ]
+    },
+    {
+      "name": "Toast Bread",
+      "prices": [
+        {
+          "value": 3.99
+        },
+        {
+          "value": 3.99,
+          "discount_price": 2.77
+        },
+        {
+          "value": 4
+        }
       ]
     },
     {
@@ -422,7 +601,8 @@
         },
         {
           "value": 3.99
-        }
+        },
+        null
       ]
     },
     {
@@ -431,6 +611,17 @@
         null,
         {
           "value": 2.69
+        },
+        null
+      ]
+    },
+    {
+      "name": "Tortilla Wraps",
+      "prices": [
+        null,
+        null,
+        {
+          "value": 4.25
         }
       ]
     },
@@ -441,11 +632,28 @@
           "value": 3.99,
           "discount_price": 2.79
         },
+        null,
         null
       ]
     },
     {
-      "name": "Zucchini Squash",
+      "name": "Yellow Pepper",
+      "prices": [
+        {
+          "value": 2.42,
+          "weight_g": 220,
+          "per_100g": 1.1
+        },
+        null,
+        {
+          "value": 1.5,
+          "weight_g": 170,
+          "per_100g": 0.88
+        }
+      ]
+    },
+    {
+      "name": "Zucchini",
       "prices": [
         {
           "value": 3.54,
@@ -456,6 +664,11 @@
           "value": 3.35,
           "weight_g": 435,
           "per_100g": 0.77
+        },
+        {
+          "value": 1.91,
+          "weight_g": 290,
+          "per_100g": 0.659
         }
       ]
     }

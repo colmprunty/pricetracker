@@ -86,9 +86,73 @@ type CSVRow struct {
 	DiscountPrice string // optional, discounted price
 }
 
+// loadAliases reads data/item-names.json and returns a map from
+// store → (receiptName → canonicalName). Store is the last hyphen-separated
+// segment of a column name (e.g. "freshco" from "2026-03-08-freshco").
+func loadAliases() (map[string]map[string]string, error) {
+	b, err := os.ReadFile(filepath.Join(dataDir, "item-names.json"))
+	if os.IsNotExist(err) {
+		return nil, nil
+	}
+	if err != nil {
+		return nil, fmt.Errorf("load item-names.json: %w", err)
+	}
+	var raw struct {
+		Items []map[string]string `json:"items"`
+	}
+	if err := json.Unmarshal(b, &raw); err != nil {
+		return nil, fmt.Errorf("parse item-names.json: %w", err)
+	}
+	result := make(map[string]map[string]string)
+	for _, item := range raw.Items {
+		canonical := item["canonical"]
+		for k, v := range item {
+			if k == "canonical" || strings.HasPrefix(k, "_") {
+				continue
+			}
+			if result[k] == nil {
+				result[k] = make(map[string]string)
+			}
+			result[k][v] = canonical
+		}
+	}
+	return result, nil
+}
+
+// applyAliases remaps receipt item names to canonical names for the given store.
+func applyAliases(csvData map[string]CSVRow, store string, aliases map[string]map[string]string) map[string]CSVRow {
+	storeAliases := aliases[store]
+	if len(storeAliases) == 0 {
+		return csvData
+	}
+	out := make(map[string]CSVRow, len(csvData))
+	for name, row := range csvData {
+		if canonical, ok := storeAliases[name]; ok {
+			out[canonical] = row
+		} else {
+			out[name] = row
+		}
+	}
+	return out
+}
+
+// storeFromCol extracts the store name from a column name like "2026-03-08-freshco".
+func storeFromCol(col string) string {
+	parts := strings.SplitN(col, "-", 4)
+	if len(parts) == 4 {
+		return parts[3]
+	}
+	return col
+}
+
 // processCSVs merges any new CSV files into prices.json.
 // Existing data is preserved; only unprocessed CSVs are added.
 func processCSVs() error {
+	aliases, err := loadAliases()
+	if err != nil {
+		return err
+	}
+
 	var existing PricesData
 	if b, err := os.ReadFile(pricesDataFile); err == nil {
 		if err := json.Unmarshal(b, &existing); err != nil {
@@ -128,6 +192,7 @@ func processCSVs() error {
 		if err != nil {
 			return err
 		}
+		csvData = applyAliases(csvData, storeFromCol(col), aliases)
 
 		colIdx := len(existing.Columns)
 		existing.Columns = append(existing.Columns, col)
