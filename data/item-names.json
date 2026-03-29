@@ -4,14 +4,17 @@
     { "canonical": "Avocado",              "freshco": "Avocados",            "nofrills": "AVOCADO SMALL" },
     { "canonical": "Milk 4l",              "freshco": "Milk Homo",           "nofrills": "HOMO 4LI" },
     { "canonical": "Green Beans",          "freshco": "Beans French Green",  "nofrills": "BEAN GREEN" },
+    { "canonical": "Green Beans",          "freshco": "Beans Green" },
     { "canonical": "Zucchini",             "freshco": "Zucchini Squash",     "nofrills": "ZUCCHINI GREEN" },
     { "canonical": "Red Pepper",           "freshco": "Peppers Red",         "nofrills": "RED PEPPERS" },
+    { "canonical": "Red Pepper",           "freshco": "Pepper Red Field" },
     { "canonical": "Yellow Pepper",        "freshco": "Pepper Bell Yell Swt","nofrills": "PEPPER YLW SWT" },
     { "canonical": "Blackberries",         "freshco": "Blackberries",        "nofrills": "BLACKBERRIES 6OZ" },
     { "canonical": "Strawberries 1lb",     "freshco": "Strawberries 1lb",    "nofrills": "STRAWBERRIES 1LB" },
     { "canonical": "Sweet Potato",         "freshco": "Potato Sweet Orange", "nofrills": "SWEET POTATO" },
     { "canonical": "Toast Bread",          "freshco": "Bread 12 Grain 600G", "nofrills": "CH 14 GRAIN" },
     { "canonical": "Broccoli",             "freshco": "Broccoli",            "nofrills": "BROCCOLI" },
+    { "canonical": "Broccoli",             "freshco": "Broccoli Crowns" },
     { "canonical": "Oreo Double Stuf Small","nofrills": "OREO DBLE STUF" },
     { "canonical": "PC Maple Syrup",       "nofrills": "PC MPL SYRUP" },
     { "canonical": "Mixed Beans",          "nofrills": "UNICO BEAN" },
@@ -20,10 +23,11 @@
     { "canonical": "Philadelphia Soft Plain","nofrills": "PHILA SOFT PLAIN" },
     { "canonical": "Potatoes 10lb",        "nofrills": "POTATO RUSS 10LB" },
     { "canonical": "Mini Cucumbers",       "nofrills": "FM MINI CUC" },
-    { "canonical": "Banana",               "nofrills": "BANANA" },
+    { "canonical": "Banana",               "freshco": "Bananas",             "nofrills": "BANANA" },
     { "canonical": "Butternut Squash",     "nofrills": "SQUASH BUTTERNUT" },
     { "canonical": "PC Brioche Hot Dog Buns","nofrills": "PC BR HT DOG BUN" },
     { "canonical": "Tortilla Wraps",       "nofrills": "CM TORTILLA WW" },
-    { "canonical": "Stock",                "nofrills": "CPB ASPTC NS" }
+    { "canonical": "Stock",                "nofrills": "CPB ASPTC NS" },
+    { "canonical": "Apples Ambrosia 3lbs","freshco": "Apples Ambrosia" }
   ]
 }

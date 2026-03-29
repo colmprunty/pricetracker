@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-03-23T23:38:00.538513Z",
+  "generated_at": "2026-03-29T20:51:35.312233Z",
   "columns": [
     "2026-03-08-freshco",
     "2026-03-15-freshco",
-    "2026-03-22-nofrills"
+    "2026-03-22-nofrills",
+    "2026-03-29-freshco"
   ],
   "rows": [
     {
@@ -13,6 +14,7 @@
         {
           "value": 4.99
         },
+        null,
         null
       ]
     },
@@ -23,7 +25,13 @@
           "value": 5.99
         },
         null,
-        null
+        null,
+        {
+          "value": 8.89,
+          "weight_g": 1350,
+          "per_100g": 0.395,
+          "discount_price": 5.33
+        }
       ]
     },
     {
@@ -32,6 +40,9 @@
         {
           "value": 1.49,
           "discount_price": 1.29
+        },
+        {
+          "value": 1.79
         },
         {
           "value": 1.79
@@ -50,6 +61,23 @@
           "value": 0.72,
           "weight_g": 475,
           "per_100g": 0.152
+        },
+        {
+          "value": 0.79,
+          "weight_g": 520,
+          "per_100g": 0.152
+        }
+      ]
+    },
+    {
+      "name": "Beans Kidney",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 1.99,
+          "discount_price": 1.66
         }
       ]
     },
@@ -59,6 +87,7 @@
         {
           "value": 6.99
         },
+        null,
         null,
         null
       ]
@@ -73,6 +102,20 @@
         },
         {
           "value": 2.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "Bok Choy Shanghai",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 2.53,
+          "weight_g": 460,
+          "per_100g": 0.549
         }
       ]
     },
@@ -86,7 +129,10 @@
           "value": 3.99,
           "discount_price": 2.77
         },
-        null
+        null,
+        {
+          "value": 3.99
+        }
       ]
     },
     {
@@ -100,6 +146,11 @@
         },
         {
           "value": 3.99
+        },
+        {
+          "value": 3.69,
+          "weight_g": 480,
+          "per_100g": 0.769
         }
       ]
     },
@@ -112,7 +163,8 @@
           "value": 8.67,
           "weight_g": 1580,
           "per_100g": 0.549
-        }
+        },
+        null
       ]
     },
     {
@@ -122,6 +174,7 @@
         {
           "value": 14.99
         },
+        null,
         null
       ]
     },
@@ -133,6 +186,7 @@
           "value": 6.99,
           "discount_price": 5.47
         },
+        null,
         null
       ]
     },
@@ -144,7 +198,20 @@
           "discount_price": 5.47
         },
         null,
+        null,
         null
+      ]
+    },
+    {
+      "name": "Cheese Creamy Havart",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 10.49,
+          "discount_price": 8.49
+        }
       ]
     },
     {
@@ -154,7 +221,20 @@
         {
           "value": 6.49
         },
+        null,
         null
+      ]
+    },
+    {
+      "name": "Chips Ahoy Rainbow",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 2.99
+        }
       ]
     },
     {
@@ -164,6 +244,7 @@
         {
           "value": 7.99
         },
+        null,
         null
       ]
     },
@@ -174,7 +255,10 @@
         {
           "value": 6.99
         },
-        null
+        null,
+        {
+          "value": 8.99
+        }
       ]
     },
     {
@@ -185,6 +269,7 @@
           "value": 2.49,
           "discount_price": 2.29
         },
+        null,
         null
       ]
     },
@@ -195,6 +280,7 @@
         {
           "value": 8.99
         },
+        null,
         null
       ]
     },
@@ -204,6 +290,7 @@
         {
           "value": 2.99
         },
+        null,
         null,
         null
       ]
@@ -215,7 +302,11 @@
         {
           "value": 3.99
         },
-        null
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 3.29
+        }
       ]
     },
     {
@@ -225,6 +316,19 @@
         null,
         {
           "value": 7.18
+        },
+        null
+      ]
+    },
+    {
+      "name": "Dry Sausage Chorizo",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 6.49,
+          "discount_price": 4.99
         }
       ]
     },
@@ -234,6 +338,7 @@
         {
           "value": 3
         },
+        null,
         null,
         null
       ]
@@ -245,7 +350,20 @@
         {
           "value": 2.99
         },
+        null,
         null
+      ]
+    },
+    {
+      "name": "Garlic Fresh 5EA",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 1.49,
+          "discount_price": 1.29
+        }
       ]
     },
     {
@@ -262,6 +380,11 @@
           "value": 5.37,
           "weight_g": 610,
           "per_100g": 0.88
+        },
+        {
+          "value": 5.19,
+          "weight_g": 590,
+          "per_100g": 0.88
         }
       ]
     },
@@ -273,7 +396,11 @@
           "value": 14.99,
           "discount_price": 11.99
         },
-        null
+        null,
+        {
+          "value": 14.99,
+          "discount_price": 11.99
+        }
       ]
     },
     {
@@ -283,6 +410,7 @@
           "value": 6.99,
           "discount_price": 4.99
         },
+        null,
         null,
         null
       ]
@@ -294,6 +422,7 @@
         {
           "value": 6.99
         },
+        null,
         null
       ]
     },
@@ -304,7 +433,19 @@
         {
           "value": 0.99
         },
+        null,
         null
+      ]
+    },
+    {
+      "name": "Loreal Mango",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 7.29
+        }
       ]
     },
     {
@@ -316,6 +457,9 @@
         null,
         {
           "value": 7.45
+        },
+        {
+          "value": 7.49
         }
       ]
     },
@@ -326,7 +470,8 @@
         null,
         {
           "value": 2.99
-        }
+        },
+        null
       ]
     },
     {
@@ -336,6 +481,19 @@
         null,
         {
           "value": 1.79
+        },
+        null
+      ]
+    },
+    {
+      "name": "Mushrooms",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 2.99,
+          "discount_price": 2.49
         }
       ]
     },
@@ -346,6 +504,7 @@
         {
           "value": 5
         },
+        null,
         null
       ]
     },
@@ -356,7 +515,8 @@
         null,
         {
           "value": 10
-        }
+        },
+        null
       ]
     },
     {
@@ -366,6 +526,7 @@
         {
           "value": 4.99
         },
+        null,
         null
       ]
     },
@@ -377,6 +538,7 @@
           "discount_price": 3.99
         },
         null,
+        null,
         null
       ]
     },
@@ -387,6 +549,18 @@
         null,
         {
           "value": 2.79
+        },
+        null
+      ]
+    },
+    {
+      "name": "OrngJuice NoPulp NFC",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 6.99
         }
       ]
     },
@@ -397,7 +571,8 @@
         null,
         {
           "value": 5
-        }
+        },
+        null
       ]
     },
     {
@@ -407,6 +582,19 @@
         null,
         {
           "value": 5.5
+        },
+        null
+      ]
+    },
+    {
+      "name": "Passata",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 5.99,
+          "discount_price": 5.49
         }
       ]
     },
@@ -417,6 +605,7 @@
         {
           "value": 2.99
         },
+        null,
         null
       ]
     },
@@ -429,7 +618,12 @@
           "weight_g": 250,
           "per_100g": 1.1
         },
-        null
+        null,
+        {
+          "value": 2.48,
+          "weight_g": 225,
+          "per_100g": 1.1
+        }
       ]
     },
     {
@@ -439,6 +633,7 @@
         {
           "value": 3.29
         },
+        null,
         null
       ]
     },
@@ -449,7 +644,8 @@
         null,
         {
           "value": 4
-        }
+        },
+        null
       ]
     },
     {
@@ -459,6 +655,19 @@
         null,
         {
           "value": 1.97
+        },
+        null
+      ]
+    },
+    {
+      "name": "Raspberries 1/2 Pint",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 4.49,
+          "discount_price": 3.99
         }
       ]
     },
@@ -475,6 +684,11 @@
           "value": 1.63,
           "weight_g": 185,
           "per_100g": 0.88
+        },
+        {
+          "value": 3.26,
+          "weight_g": 495,
+          "per_100g": 0.659
         }
       ]
     },
@@ -484,6 +698,7 @@
         {
           "value": 5.49
         },
+        null,
         null,
         null
       ]
@@ -495,7 +710,10 @@
         {
           "value": 6.49
         },
-        null
+        null,
+        {
+          "value": 6.49
+        }
       ]
     },
     {
@@ -505,7 +723,10 @@
           "value": 2.99
         },
         null,
-        null
+        null,
+        {
+          "value": 2.99
+        }
       ]
     },
     {
@@ -515,6 +736,7 @@
         {
           "value": 19.99
         },
+        null,
         null
       ]
     },
@@ -525,6 +747,7 @@
         {
           "value": 2
         },
+        null,
         null
       ]
     },
@@ -535,7 +758,8 @@
         null,
         {
           "value": 1.5
-        }
+        },
+        null
       ]
     },
     {
@@ -548,7 +772,8 @@
         null,
         {
           "value": 1.99
-        }
+        },
+        null
       ]
     },
     {
@@ -565,7 +790,8 @@
           "value": 2.69,
           "weight_g": 820,
           "per_100g": 0.328
-        }
+        },
+        null
       ]
     },
     {
@@ -574,6 +800,7 @@
         {
           "value": 10.99
         },
+        null,
         null,
         null
       ]
@@ -590,7 +817,8 @@
         },
         {
           "value": 4
-        }
+        },
+        null
       ]
     },
     {
@@ -602,7 +830,11 @@
         {
           "value": 3.99
         },
-        null
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 3.49
+        }
       ]
     },
     {
@@ -612,6 +844,7 @@
         {
           "value": 2.69
         },
+        null,
         null
       ]
     },
@@ -622,7 +855,8 @@
         null,
         {
           "value": 4.25
-        }
+        },
+        null
       ]
     },
     {
@@ -632,6 +866,7 @@
           "value": 3.99,
           "discount_price": 2.79
         },
+        null,
         null,
         null
       ]
@@ -649,6 +884,19 @@
           "value": 1.5,
           "weight_g": 170,
           "per_100g": 0.88
+        },
+        null
+      ]
+    },
+    {
+      "name": "Yogurt Van 100G 8Pk",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 4.99,
+          "discount_price": 3.99
         }
       ]
     },
@@ -668,6 +916,11 @@
         {
           "value": 1.91,
           "weight_g": 290,
+          "per_100g": 0.659
+        },
+        {
+          "value": 3.33,
+          "weight_g": 505,
           "per_100g": 0.659
         }
       ]
