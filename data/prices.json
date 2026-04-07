@@ -1,9 +1,19 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2026-03-23T23:38:00.538513Z",
   "columns": [
     "2026-03-08-freshco",
     "2026-03-15-freshco",
     "2026-03-22-nofrills"
+=======
+  "generated_at": "2026-04-07T00:07:26.6988Z",
+  "columns": [
+    "2026-03-08-freshco",
+    "2026-03-15-freshco",
+    "2026-03-22-nofrills",
+    "2026-03-29-freshco",
+    "2026-04-06-nofrills"
+>>>>>>> Stashed changes
   ],
   "rows": [
     {
@@ -13,7 +23,25 @@
         {
           "value": 4.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
+      ]
+    },
+    {
+      "name": "Ancient Grain Bread",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 8,
+          "discount_price": 6.49
+        }
       ]
     },
     {
@@ -23,6 +51,16 @@
           "value": 5.99
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        {
+          "value": 8.89,
+          "weight_g": 1350,
+          "per_100g": 0.395,
+          "discount_price": 5.33
+        },
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -38,7 +76,15 @@
         },
         {
           "value": 1.79
+<<<<<<< Updated upstream
         }
+=======
+        },
+        {
+          "value": 1.79
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -50,7 +96,46 @@
           "value": 0.72,
           "weight_g": 475,
           "per_100g": 0.152
+<<<<<<< Updated upstream
         }
+=======
+        },
+        {
+          "value": 0.79,
+          "weight_g": 520,
+          "per_100g": 0.152
+        },
+        {
+          "value": 1.52,
+          "weight_g": 300,
+          "per_100g": 0.152
+        }
+      ]
+    },
+    {
+      "name": "Band-Aid FLX",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 6.79
+        }
+      ]
+    },
+    {
+      "name": "Beans Kidney",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 1.99,
+          "discount_price": 1.66
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -60,6 +145,11 @@
           "value": 6.99
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -73,7 +163,27 @@
         },
         {
           "value": 2.99
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Bok Choy Shanghai",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 2.53,
+          "weight_g": 460,
+          "per_100g": 0.549
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -86,6 +196,13 @@
           "value": 3.99,
           "discount_price": 2.77
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        {
+          "value": 3.99
+        },
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -100,6 +217,17 @@
         },
         {
           "value": 3.99
+<<<<<<< Updated upstream
+=======
+        },
+        {
+          "value": 3.69,
+          "weight_g": 480,
+          "per_100g": 0.769
+        },
+        {
+          "value": 3.93
+>>>>>>> Stashed changes
         }
       ]
     },
@@ -112,7 +240,13 @@
           "value": 8.67,
           "weight_g": 1580,
           "per_100g": 0.549
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -122,6 +256,11 @@
         {
           "value": 14.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -133,6 +272,11 @@
           "value": 6.99,
           "discount_price": 5.47
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -144,26 +288,73 @@
           "discount_price": 5.47
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
     {
+<<<<<<< Updated upstream
+=======
+      "name": "Cheese Creamy Havart",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 10.49,
+          "discount_price": 8.49
+        },
+        null
+      ]
+    },
+    {
+>>>>>>> Stashed changes
       "name": "Cheese Halloumi",
       "prices": [
         null,
         {
           "value": 6.49
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
     {
+<<<<<<< Updated upstream
+=======
+      "name": "Chips Ahoy Rainbow",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 2.99
+        },
+        null
+      ]
+    },
+    {
+>>>>>>> Stashed changes
       "name": "Chwy Nt Grn Brs DrkC",
       "prices": [
         null,
         {
           "value": 7.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -174,6 +365,13 @@
         {
           "value": 6.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        {
+          "value": 8.99
+        },
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -185,6 +383,11 @@
           "value": 2.49,
           "discount_price": 2.29
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -195,6 +398,11 @@
         {
           "value": 8.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -205,6 +413,11 @@
           "value": 2.99
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -215,7 +428,28 @@
         {
           "value": 3.99
         },
+<<<<<<< Updated upstream
         null
+=======
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 3.29
+        },
+        null
+      ]
+    },
+    {
+      "name": "Danone Yogourt",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3.5
+        }
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -225,7 +459,26 @@
         null,
         {
           "value": 7.18
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Dry Sausage Chorizo",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 6.49,
+          "discount_price": 4.99
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -235,6 +488,11 @@
           "value": 3
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -245,10 +503,45 @@
         {
           "value": 2.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
     {
+<<<<<<< Updated upstream
+=======
+      "name": "Garlic Fresh 5EA",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 1.49,
+          "discount_price": 1.29
+        },
+        null
+      ]
+    },
+    {
+      "name": "Grape Red SDL CS",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 8.8,
+          "weight_g": 940,
+          "per_100g": 0.88
+        }
+      ]
+    },
+    {
+>>>>>>> Stashed changes
       "name": "Green Beans",
       "prices": [
         {
@@ -262,7 +555,17 @@
           "value": 5.37,
           "weight_g": 610,
           "per_100g": 0.88
+<<<<<<< Updated upstream
         }
+=======
+        },
+        {
+          "value": 5.19,
+          "weight_g": 590,
+          "per_100g": 0.88
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -273,6 +576,14 @@
           "value": 14.99,
           "discount_price": 11.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        {
+          "value": 14.99,
+          "discount_price": 11.99
+        },
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -284,6 +595,11 @@
           "discount_price": 4.99
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -294,7 +610,36 @@
         {
           "value": 6.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
+      ]
+    },
+    {
+      "name": "Labag Baguet",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "Lafd Milk Brioch",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.79
+        }
       ]
     },
     {
@@ -304,10 +649,30 @@
         {
           "value": 0.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
     {
+<<<<<<< Updated upstream
+=======
+      "name": "Loreal Mango",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 7.29
+        },
+        null
+      ]
+    },
+    {
+>>>>>>> Stashed changes
       "name": "Milk 4l",
       "prices": [
         {
@@ -316,7 +681,15 @@
         null,
         {
           "value": 7.45
+<<<<<<< Updated upstream
         }
+=======
+        },
+        {
+          "value": 7.49
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -326,6 +699,13 @@
         null,
         {
           "value": 2.99
+<<<<<<< Updated upstream
+=======
+        },
+        null,
+        {
+          "value": 2.99
+>>>>>>> Stashed changes
         }
       ]
     },
@@ -336,7 +716,26 @@
         null,
         {
           "value": 1.79
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Mushrooms",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 2.99,
+          "discount_price": 2.49
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -346,7 +745,24 @@
         {
           "value": 5
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
+      ]
+    },
+    {
+      "name": "Nava Senbei Shel",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 1.69
+        }
       ]
     },
     {
@@ -356,6 +772,36 @@
         null,
         {
           "value": 10
+<<<<<<< Updated upstream
+        }
+=======
+        },
+        null,
+        null
+>>>>>>> Stashed changes
+      ]
+    },
+    {
+      "name": "Onion Green",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 1.49
+        }
+      ]
+    },
+    {
+      "name": "Onionrd16X3LB",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.99
         }
       ]
     },
@@ -366,6 +812,11 @@
         {
           "value": 4.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -377,6 +828,11 @@
           "discount_price": 3.99
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -387,6 +843,47 @@
         null,
         {
           "value": 2.79
+<<<<<<< Updated upstream
+=======
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Oreo Original",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.5
+        }
+      ]
+    },
+    {
+      "name": "OrngJuice NoPulp NFC",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 6.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "PC Basil 286",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 2
+>>>>>>> Stashed changes
         }
       ]
     },
@@ -397,6 +894,24 @@
         null,
         {
           "value": 5
+<<<<<<< Updated upstream
+        }
+=======
+        },
+        null,
+        null
+>>>>>>> Stashed changes
+      ]
+    },
+    {
+      "name": "PC Edamame",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3.29
         }
       ]
     },
@@ -407,7 +922,50 @@
         null,
         {
           "value": 5.5
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "PC Water Cracker",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "PCO Tomato Grape",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.99
+        }
+      ]
+    },
+    {
+      "name": "Passata",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 5.99,
+          "discount_price": 5.49
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -417,6 +975,11 @@
         {
           "value": 2.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -429,7 +992,29 @@
           "weight_g": 250,
           "per_100g": 1.1
         },
+<<<<<<< Updated upstream
         null
+=======
+        null,
+        {
+          "value": 2.48,
+          "weight_g": 225,
+          "per_100g": 1.1
+        },
+        null
+      ]
+    },
+    {
+      "name": "Peppers 4 Pack",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.99
+        }
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -439,6 +1024,11 @@
         {
           "value": 3.29
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -449,7 +1039,13 @@
         null,
         {
           "value": 4
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -459,7 +1055,26 @@
         null,
         {
           "value": 1.97
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Raspberries 1/2 Pint",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 4.49,
+          "discount_price": 3.99
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -475,7 +1090,17 @@
           "value": 1.63,
           "weight_g": 185,
           "per_100g": 0.88
+<<<<<<< Updated upstream
         }
+=======
+        },
+        {
+          "value": 3.26,
+          "weight_g": 495,
+          "per_100g": 0.659
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -485,6 +1110,11 @@
           "value": 5.49
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -495,7 +1125,39 @@
         {
           "value": 6.49
         },
+<<<<<<< Updated upstream
         null
+=======
+        null,
+        {
+          "value": 6.49
+        },
+        null
+      ]
+    },
+    {
+      "name": "Rooster Rice",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 5
+        }
+      ]
+    },
+    {
+      "name": "Sapu Mozza Fresc",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 6.79
+        }
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -505,6 +1167,13 @@
           "value": 2.99
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        {
+          "value": 2.99
+        },
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -515,7 +1184,24 @@
         {
           "value": 19.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
+      ]
+    },
+    {
+      "name": "Smoked Tofu",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 5.5
+        }
       ]
     },
     {
@@ -525,6 +1211,11 @@
         {
           "value": 2
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -535,7 +1226,13 @@
         null,
         {
           "value": 1.5
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -548,6 +1245,13 @@
         null,
         {
           "value": 1.99
+<<<<<<< Updated upstream
+=======
+        },
+        null,
+        {
+          "value": 1.99
+>>>>>>> Stashed changes
         }
       ]
     },
@@ -565,6 +1269,24 @@
           "value": 2.69,
           "weight_g": 820,
           "per_100g": 0.328
+<<<<<<< Updated upstream
+        }
+=======
+        },
+        null,
+        null
+>>>>>>> Stashed changes
+      ]
+    },
+    {
+      "name": "TS Halloumi",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 5
         }
       ]
     },
@@ -575,6 +1297,11 @@
           "value": 10.99
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -590,6 +1317,13 @@
         },
         {
           "value": 4
+<<<<<<< Updated upstream
+=======
+        },
+        null,
+        {
+          "value": 4
+>>>>>>> Stashed changes
         }
       ]
     },
@@ -602,6 +1336,14 @@
         {
           "value": 3.99
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 3.49
+        },
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -612,6 +1354,11 @@
         {
           "value": 2.69
         },
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -622,7 +1369,13 @@
         null,
         {
           "value": 4.25
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -633,6 +1386,11 @@
           "discount_price": 2.79
         },
         null,
+<<<<<<< Updated upstream
+=======
+        null,
+        null,
+>>>>>>> Stashed changes
         null
       ]
     },
@@ -649,7 +1407,26 @@
           "value": 1.5,
           "weight_g": 170,
           "per_100g": 0.88
+<<<<<<< Updated upstream
         }
+=======
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Yogurt Van 100G 8Pk",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 4.99,
+          "discount_price": 3.99
+        },
+        null
+>>>>>>> Stashed changes
       ]
     },
     {
@@ -669,6 +1446,19 @@
           "value": 1.91,
           "weight_g": 290,
           "per_100g": 0.659
+<<<<<<< Updated upstream
+=======
+        },
+        {
+          "value": 3.33,
+          "weight_g": 505,
+          "per_100g": 0.659
+        },
+        {
+          "value": 6.59,
+          "weight_g": 585,
+          "per_100g": 0.659
+>>>>>>> Stashed changes
         }
       ]
     }
