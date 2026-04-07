@@ -1,11 +1,4 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2026-03-23T23:38:00.538513Z",
-  "columns": [
-    "2026-03-08-freshco",
-    "2026-03-15-freshco",
-    "2026-03-22-nofrills"
-=======
   "generated_at": "2026-04-07T00:07:26.6988Z",
   "columns": [
     "2026-03-08-freshco",
@@ -13,7 +6,6 @@
     "2026-03-22-nofrills",
     "2026-03-29-freshco",
     "2026-04-06-nofrills"
->>>>>>> Stashed changes
   ],
   "rows": [
     {
@@ -23,11 +15,8 @@
         {
           "value": 4.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -51,8 +40,6 @@
           "value": 5.99
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         {
           "value": 8.89,
@@ -60,7 +47,6 @@
           "per_100g": 0.395,
           "discount_price": 5.33
         },
->>>>>>> Stashed changes
         null
       ]
     },
@@ -76,15 +62,11 @@
         },
         {
           "value": 1.79
-<<<<<<< Updated upstream
-        }
-=======
         },
         {
           "value": 1.79
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -96,9 +78,6 @@
           "value": 0.72,
           "weight_g": 475,
           "per_100g": 0.152
-<<<<<<< Updated upstream
-        }
-=======
         },
         {
           "value": 0.79,
@@ -135,7 +114,6 @@
           "discount_price": 1.66
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -145,11 +123,8 @@
           "value": 6.99
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -163,9 +138,6 @@
         },
         {
           "value": 2.99
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
@@ -183,7 +155,6 @@
           "per_100g": 0.549
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -196,13 +167,10 @@
           "value": 3.99,
           "discount_price": 2.77
         },
-<<<<<<< Updated upstream
-=======
         null,
         {
           "value": 3.99
         },
->>>>>>> Stashed changes
         null
       ]
     },
@@ -217,8 +185,6 @@
         },
         {
           "value": 3.99
-<<<<<<< Updated upstream
-=======
         },
         {
           "value": 3.69,
@@ -227,7 +193,6 @@
         },
         {
           "value": 3.93
->>>>>>> Stashed changes
         }
       ]
     },
@@ -240,13 +205,9 @@
           "value": 8.67,
           "weight_g": 1580,
           "per_100g": 0.549
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -256,11 +217,8 @@
         {
           "value": 14.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -272,11 +230,8 @@
           "value": 6.99,
           "discount_price": 5.47
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -288,17 +243,12 @@
           "discount_price": 5.47
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
     {
-<<<<<<< Updated upstream
-=======
       "name": "Cheese Creamy Havart",
       "prices": [
         null,
@@ -312,24 +262,18 @@
       ]
     },
     {
->>>>>>> Stashed changes
       "name": "Cheese Halloumi",
       "prices": [
         null,
         {
           "value": 6.49
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
     {
-<<<<<<< Updated upstream
-=======
       "name": "Chips Ahoy Rainbow",
       "prices": [
         null,
@@ -343,18 +287,14 @@
       ]
     },
     {
->>>>>>> Stashed changes
       "name": "Chwy Nt Grn Brs DrkC",
       "prices": [
         null,
         {
           "value": 7.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -365,13 +305,10 @@
         {
           "value": 6.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         {
           "value": 8.99
         },
->>>>>>> Stashed changes
         null
       ]
     },
@@ -383,11 +320,8 @@
           "value": 2.49,
           "discount_price": 2.29
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -398,11 +332,8 @@
         {
           "value": 8.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -413,11 +344,8 @@
           "value": 2.99
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -428,9 +356,6 @@
         {
           "value": 3.99
         },
-<<<<<<< Updated upstream
-        null
-=======
         null,
         {
           "value": 3.99,
@@ -449,7 +374,6 @@
         {
           "value": 3.5
         }
->>>>>>> Stashed changes
       ]
     },
     {
@@ -459,9 +383,6 @@
         null,
         {
           "value": 7.18
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
@@ -478,7 +399,6 @@
           "discount_price": 4.99
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -488,11 +408,8 @@
           "value": 3
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -503,17 +420,12 @@
         {
           "value": 2.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
     {
-<<<<<<< Updated upstream
-=======
       "name": "Garlic Fresh 5EA",
       "prices": [
         null,
@@ -541,7 +453,6 @@
       ]
     },
     {
->>>>>>> Stashed changes
       "name": "Green Beans",
       "prices": [
         {
@@ -555,9 +466,6 @@
           "value": 5.37,
           "weight_g": 610,
           "per_100g": 0.88
-<<<<<<< Updated upstream
-        }
-=======
         },
         {
           "value": 5.19,
@@ -565,7 +473,6 @@
           "per_100g": 0.88
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -576,14 +483,11 @@
           "value": 14.99,
           "discount_price": 11.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         {
           "value": 14.99,
           "discount_price": 11.99
         },
->>>>>>> Stashed changes
         null
       ]
     },
@@ -595,11 +499,8 @@
           "discount_price": 4.99
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -610,11 +511,8 @@
         {
           "value": 6.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -649,17 +547,12 @@
         {
           "value": 0.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
     {
-<<<<<<< Updated upstream
-=======
       "name": "Loreal Mango",
       "prices": [
         null,
@@ -672,7 +565,6 @@
       ]
     },
     {
->>>>>>> Stashed changes
       "name": "Milk 4l",
       "prices": [
         {
@@ -681,15 +573,11 @@
         null,
         {
           "value": 7.45
-<<<<<<< Updated upstream
-        }
-=======
         },
         {
           "value": 7.49
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -699,13 +587,10 @@
         null,
         {
           "value": 2.99
-<<<<<<< Updated upstream
-=======
         },
         null,
         {
           "value": 2.99
->>>>>>> Stashed changes
         }
       ]
     },
@@ -716,9 +601,6 @@
         null,
         {
           "value": 1.79
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
@@ -735,7 +617,6 @@
           "discount_price": 2.49
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -745,11 +626,8 @@
         {
           "value": 5
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -772,13 +650,9 @@
         null,
         {
           "value": 10
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -812,11 +686,8 @@
         {
           "value": 4.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -828,11 +699,8 @@
           "discount_price": 3.99
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -843,8 +711,6 @@
         null,
         {
           "value": 2.79
-<<<<<<< Updated upstream
-=======
         },
         null,
         null
@@ -883,7 +749,6 @@
         null,
         {
           "value": 2
->>>>>>> Stashed changes
         }
       ]
     },
@@ -894,13 +759,9 @@
         null,
         {
           "value": 5
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -922,9 +783,6 @@
         null,
         {
           "value": 5.5
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
@@ -965,7 +823,6 @@
           "discount_price": 5.49
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -975,11 +832,8 @@
         {
           "value": 2.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -992,9 +846,6 @@
           "weight_g": 250,
           "per_100g": 1.1
         },
-<<<<<<< Updated upstream
-        null
-=======
         null,
         {
           "value": 2.48,
@@ -1014,7 +865,6 @@
         {
           "value": 4.99
         }
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1024,11 +874,8 @@
         {
           "value": 3.29
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1039,13 +886,9 @@
         null,
         {
           "value": 4
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1055,9 +898,6 @@
         null,
         {
           "value": 1.97
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
@@ -1074,7 +914,6 @@
           "discount_price": 3.99
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1090,9 +929,6 @@
           "value": 1.63,
           "weight_g": 185,
           "per_100g": 0.88
-<<<<<<< Updated upstream
-        }
-=======
         },
         {
           "value": 3.26,
@@ -1100,7 +936,6 @@
           "per_100g": 0.659
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1110,11 +945,8 @@
           "value": 5.49
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1125,9 +957,6 @@
         {
           "value": 6.49
         },
-<<<<<<< Updated upstream
-        null
-=======
         null,
         {
           "value": 6.49
@@ -1157,7 +986,6 @@
         {
           "value": 6.79
         }
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1167,13 +995,10 @@
           "value": 2.99
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         {
           "value": 2.99
         },
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1184,11 +1009,8 @@
         {
           "value": 19.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1211,11 +1033,8 @@
         {
           "value": 2
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1226,13 +1045,9 @@
         null,
         {
           "value": 1.5
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1245,13 +1060,10 @@
         null,
         {
           "value": 1.99
-<<<<<<< Updated upstream
-=======
         },
         null,
         {
           "value": 1.99
->>>>>>> Stashed changes
         }
       ]
     },
@@ -1269,13 +1081,9 @@
           "value": 2.69,
           "weight_g": 820,
           "per_100g": 0.328
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1297,11 +1105,8 @@
           "value": 10.99
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1317,13 +1122,10 @@
         },
         {
           "value": 4
-<<<<<<< Updated upstream
-=======
         },
         null,
         {
           "value": 4
->>>>>>> Stashed changes
         }
       ]
     },
@@ -1336,14 +1138,11 @@
         {
           "value": 3.99
         },
-<<<<<<< Updated upstream
-=======
         null,
         {
           "value": 3.99,
           "discount_price": 3.49
         },
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1354,11 +1153,8 @@
         {
           "value": 2.69
         },
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1369,13 +1165,9 @@
         null,
         {
           "value": 4.25
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1386,11 +1178,8 @@
           "discount_price": 2.79
         },
         null,
-<<<<<<< Updated upstream
-=======
         null,
         null,
->>>>>>> Stashed changes
         null
       ]
     },
@@ -1407,9 +1196,6 @@
           "value": 1.5,
           "weight_g": 170,
           "per_100g": 0.88
-<<<<<<< Updated upstream
-        }
-=======
         },
         null,
         null
@@ -1426,7 +1212,6 @@
           "discount_price": 3.99
         },
         null
->>>>>>> Stashed changes
       ]
     },
     {
@@ -1446,8 +1231,6 @@
           "value": 1.91,
           "weight_g": 290,
           "per_100g": 0.659
-<<<<<<< Updated upstream
-=======
         },
         {
           "value": 3.33,
@@ -1458,7 +1241,6 @@
           "value": 6.59,
           "weight_g": 585,
           "per_100g": 0.659
->>>>>>> Stashed changes
         }
       ]
     }
