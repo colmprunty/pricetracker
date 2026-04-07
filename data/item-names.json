@@ -20,10 +20,13 @@
     { "canonical": "Philadelphia Soft Plain","nofrills": "PHILA SOFT PLAIN" },
     { "canonical": "Potatoes 10lb",        "nofrills": "POTATO RUSS 10LB" },
     { "canonical": "Mini Cucumbers",       "nofrills": "FM MINI CUC" },
-    { "canonical": "Banana",               "nofrills": "BANANA" },
+    { "canonical": "Banana",               "freshco": "Bananas",             "nofrills": "BANANA" },
     { "canonical": "Butternut Squash",     "nofrills": "SQUASH BUTTERNUT" },
     { "canonical": "PC Brioche Hot Dog Buns","nofrills": "PC BR HT DOG BUN" },
     { "canonical": "Tortilla Wraps",       "nofrills": "CM TORTILLA WW" },
-    { "canonical": "Stock",                "nofrills": "CPB ASPTC NS" }
+    { "canonical": "Stock",                "nofrills": "CPB ASPTC NS" },
+    { "canonical": "Apples Ambrosia 3lbs", "freshco": "Apples Ambrosia" },
+    { "canonical": "Peppers 4 Pack",       "nofrills": "FM Pepper SVT" },
+    { "canonical": "Ancient Grain Bread",  "nofrills": "CH Ancient GRN" }
   ]
 }

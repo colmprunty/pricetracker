@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-03-23T23:38:00.538513Z",
+  "generated_at": "2026-04-07T00:07:26.6988Z",
   "columns": [
     "2026-03-08-freshco",
     "2026-03-15-freshco",
-    "2026-03-22-nofrills"
+    "2026-03-22-nofrills",
+    "2026-03-29-freshco",
+    "2026-04-06-nofrills"
   ],
   "rows": [
     {
@@ -13,7 +15,22 @@
         {
           "value": 4.99
         },
+        null,
+        null,
         null
+      ]
+    },
+    {
+      "name": "Ancient Grain Bread",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 8,
+          "discount_price": 6.49
+        }
       ]
     },
     {
@@ -23,6 +40,13 @@
           "value": 5.99
         },
         null,
+        null,
+        {
+          "value": 8.89,
+          "weight_g": 1350,
+          "per_100g": 0.395,
+          "discount_price": 5.33
+        },
         null
       ]
     },
@@ -38,7 +62,11 @@
         },
         {
           "value": 1.79
-        }
+        },
+        {
+          "value": 1.79
+        },
+        null
       ]
     },
     {
@@ -50,7 +78,42 @@
           "value": 0.72,
           "weight_g": 475,
           "per_100g": 0.152
+        },
+        {
+          "value": 0.79,
+          "weight_g": 520,
+          "per_100g": 0.152
+        },
+        {
+          "value": 1.52,
+          "weight_g": 300,
+          "per_100g": 0.152
         }
+      ]
+    },
+    {
+      "name": "Band-Aid FLX",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 6.79
+        }
+      ]
+    },
+    {
+      "name": "Beans Kidney",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 1.99,
+          "discount_price": 1.66
+        },
+        null
       ]
     },
     {
@@ -59,6 +122,8 @@
         {
           "value": 6.99
         },
+        null,
+        null,
         null,
         null
       ]
@@ -73,7 +138,23 @@
         },
         {
           "value": 2.99
-        }
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Bok Choy Shanghai",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 2.53,
+          "weight_g": 460,
+          "per_100g": 0.549
+        },
+        null
       ]
     },
     {
@@ -85,6 +166,10 @@
         {
           "value": 3.99,
           "discount_price": 2.77
+        },
+        null,
+        {
+          "value": 3.99
         },
         null
       ]
@@ -100,6 +185,14 @@
         },
         {
           "value": 3.99
+        },
+        {
+          "value": 3.69,
+          "weight_g": 480,
+          "per_100g": 0.769
+        },
+        {
+          "value": 3.93
         }
       ]
     },
@@ -112,7 +205,9 @@
           "value": 8.67,
           "weight_g": 1580,
           "per_100g": 0.549
-        }
+        },
+        null,
+        null
       ]
     },
     {
@@ -122,6 +217,8 @@
         {
           "value": 14.99
         },
+        null,
+        null,
         null
       ]
     },
@@ -133,6 +230,8 @@
           "value": 6.99,
           "discount_price": 5.47
         },
+        null,
+        null,
         null
       ]
     },
@@ -144,6 +243,21 @@
           "discount_price": 5.47
         },
         null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Cheese Creamy Havart",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 10.49,
+          "discount_price": 8.49
+        },
         null
       ]
     },
@@ -153,6 +267,21 @@
         null,
         {
           "value": 6.49
+        },
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Chips Ahoy Rainbow",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 2.99
         },
         null
       ]
@@ -164,6 +293,8 @@
         {
           "value": 7.99
         },
+        null,
+        null,
         null
       ]
     },
@@ -173,6 +304,10 @@
         null,
         {
           "value": 6.99
+        },
+        null,
+        {
+          "value": 8.99
         },
         null
       ]
@@ -185,6 +320,8 @@
           "value": 2.49,
           "discount_price": 2.29
         },
+        null,
+        null,
         null
       ]
     },
@@ -195,6 +332,8 @@
         {
           "value": 8.99
         },
+        null,
+        null,
         null
       ]
     },
@@ -204,6 +343,8 @@
         {
           "value": 2.99
         },
+        null,
+        null,
         null,
         null
       ]
@@ -215,7 +356,24 @@
         {
           "value": 3.99
         },
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 3.29
+        },
         null
+      ]
+    },
+    {
+      "name": "Danone Yogourt",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3.5
+        }
       ]
     },
     {
@@ -225,7 +383,22 @@
         null,
         {
           "value": 7.18
-        }
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Dry Sausage Chorizo",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 6.49,
+          "discount_price": 4.99
+        },
+        null
       ]
     },
     {
@@ -234,6 +407,8 @@
         {
           "value": 3
         },
+        null,
+        null,
         null,
         null
       ]
@@ -245,7 +420,36 @@
         {
           "value": 2.99
         },
+        null,
+        null,
         null
+      ]
+    },
+    {
+      "name": "Garlic Fresh 5EA",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 1.49,
+          "discount_price": 1.29
+        },
+        null
+      ]
+    },
+    {
+      "name": "Grape Red SDL CS",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 8.8,
+          "weight_g": 940,
+          "per_100g": 0.88
+        }
       ]
     },
     {
@@ -262,12 +466,23 @@
           "value": 5.37,
           "weight_g": 610,
           "per_100g": 0.88
-        }
+        },
+        {
+          "value": 5.19,
+          "weight_g": 590,
+          "per_100g": 0.88
+        },
+        null
       ]
     },
     {
       "name": "Ham Blk/Frst Shvd",
       "prices": [
+        null,
+        {
+          "value": 14.99,
+          "discount_price": 11.99
+        },
         null,
         {
           "value": 14.99,
@@ -284,6 +499,8 @@
           "discount_price": 4.99
         },
         null,
+        null,
+        null,
         null
       ]
     },
@@ -294,7 +511,33 @@
         {
           "value": 6.99
         },
+        null,
+        null,
         null
+      ]
+    },
+    {
+      "name": "Labag Baguet",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "Lafd Milk Brioch",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.79
+        }
       ]
     },
     {
@@ -303,6 +546,20 @@
         null,
         {
           "value": 0.99
+        },
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Loreal Mango",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 7.29
         },
         null
       ]
@@ -316,13 +573,21 @@
         null,
         {
           "value": 7.45
-        }
+        },
+        {
+          "value": 7.49
+        },
+        null
       ]
     },
     {
       "name": "Mini Cucumbers",
       "prices": [
         null,
+        null,
+        {
+          "value": 2.99
+        },
         null,
         {
           "value": 2.99
@@ -336,7 +601,22 @@
         null,
         {
           "value": 1.79
-        }
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Mushrooms",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 2.99,
+          "discount_price": 2.49
+        },
+        null
       ]
     },
     {
@@ -346,7 +626,21 @@
         {
           "value": 5
         },
+        null,
+        null,
         null
+      ]
+    },
+    {
+      "name": "Nava Senbei Shel",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 1.69
+        }
       ]
     },
     {
@@ -356,6 +650,32 @@
         null,
         {
           "value": 10
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Onion Green",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 1.49
+        }
+      ]
+    },
+    {
+      "name": "Onionrd16X3LB",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.99
         }
       ]
     },
@@ -366,6 +686,8 @@
         {
           "value": 4.99
         },
+        null,
+        null,
         null
       ]
     },
@@ -377,6 +699,8 @@
           "discount_price": 3.99
         },
         null,
+        null,
+        null,
         null
       ]
     },
@@ -387,6 +711,44 @@
         null,
         {
           "value": 2.79
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Oreo Original",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.5
+        }
+      ]
+    },
+    {
+      "name": "OrngJuice NoPulp NFC",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 6.99
+        },
+        null
+      ]
+    },
+    {
+      "name": "PC Basil 286",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 2
         }
       ]
     },
@@ -397,6 +759,20 @@
         null,
         {
           "value": 5
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "PC Edamame",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3.29
         }
       ]
     },
@@ -407,7 +783,46 @@
         null,
         {
           "value": 5.5
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "PC Water Cracker",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 3
         }
+      ]
+    },
+    {
+      "name": "PCO Tomato Grape",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.99
+        }
+      ]
+    },
+    {
+      "name": "Passata",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 5.99,
+          "discount_price": 5.49
+        },
+        null
       ]
     },
     {
@@ -417,6 +832,8 @@
         {
           "value": 2.99
         },
+        null,
+        null,
         null
       ]
     },
@@ -429,7 +846,25 @@
           "weight_g": 250,
           "per_100g": 1.1
         },
+        null,
+        {
+          "value": 2.48,
+          "weight_g": 225,
+          "per_100g": 1.1
+        },
         null
+      ]
+    },
+    {
+      "name": "Peppers 4 Pack",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 4.99
+        }
       ]
     },
     {
@@ -439,6 +874,8 @@
         {
           "value": 3.29
         },
+        null,
+        null,
         null
       ]
     },
@@ -449,7 +886,9 @@
         null,
         {
           "value": 4
-        }
+        },
+        null,
+        null
       ]
     },
     {
@@ -459,7 +898,22 @@
         null,
         {
           "value": 1.97
-        }
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Raspberries 1/2 Pint",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 4.49,
+          "discount_price": 3.99
+        },
+        null
       ]
     },
     {
@@ -475,7 +929,13 @@
           "value": 1.63,
           "weight_g": 185,
           "per_100g": 0.88
-        }
+        },
+        {
+          "value": 3.26,
+          "weight_g": 495,
+          "per_100g": 0.659
+        },
+        null
       ]
     },
     {
@@ -484,6 +944,8 @@
         {
           "value": 5.49
         },
+        null,
+        null,
         null,
         null
       ]
@@ -495,7 +957,35 @@
         {
           "value": 6.49
         },
+        null,
+        {
+          "value": 6.49
+        },
         null
+      ]
+    },
+    {
+      "name": "Rooster Rice",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 5
+        }
+      ]
+    },
+    {
+      "name": "Sapu Mozza Fresc",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 6.79
+        }
       ]
     },
     {
@@ -505,6 +995,10 @@
           "value": 2.99
         },
         null,
+        null,
+        {
+          "value": 2.99
+        },
         null
       ]
     },
@@ -515,7 +1009,21 @@
         {
           "value": 19.99
         },
+        null,
+        null,
         null
+      ]
+    },
+    {
+      "name": "Smoked Tofu",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 5.5
+        }
       ]
     },
     {
@@ -525,6 +1033,8 @@
         {
           "value": 2
         },
+        null,
+        null,
         null
       ]
     },
@@ -535,7 +1045,9 @@
         null,
         {
           "value": 1.5
-        }
+        },
+        null,
+        null
       ]
     },
     {
@@ -544,6 +1056,10 @@
         {
           "value": 5.99,
           "discount_price": 2.44
+        },
+        null,
+        {
+          "value": 1.99
         },
         null,
         {
@@ -565,6 +1081,20 @@
           "value": 2.69,
           "weight_g": 820,
           "per_100g": 0.328
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "TS Halloumi",
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "value": 5
         }
       ]
     },
@@ -574,6 +1104,8 @@
         {
           "value": 10.99
         },
+        null,
+        null,
         null,
         null
       ]
@@ -590,6 +1122,10 @@
         },
         {
           "value": 4
+        },
+        null,
+        {
+          "value": 4
         }
       ]
     },
@@ -602,6 +1138,11 @@
         {
           "value": 3.99
         },
+        null,
+        {
+          "value": 3.99,
+          "discount_price": 3.49
+        },
         null
       ]
     },
@@ -612,6 +1153,8 @@
         {
           "value": 2.69
         },
+        null,
+        null,
         null
       ]
     },
@@ -622,7 +1165,9 @@
         null,
         {
           "value": 4.25
-        }
+        },
+        null,
+        null
       ]
     },
     {
@@ -632,6 +1177,8 @@
           "value": 3.99,
           "discount_price": 2.79
         },
+        null,
+        null,
         null,
         null
       ]
@@ -649,7 +1196,22 @@
           "value": 1.5,
           "weight_g": 170,
           "per_100g": 0.88
-        }
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Yogurt Van 100G 8Pk",
+      "prices": [
+        null,
+        null,
+        null,
+        {
+          "value": 4.99,
+          "discount_price": 3.99
+        },
+        null
       ]
     },
     {
@@ -668,6 +1230,16 @@
         {
           "value": 1.91,
           "weight_g": 290,
+          "per_100g": 0.659
+        },
+        {
+          "value": 3.33,
+          "weight_g": 505,
+          "per_100g": 0.659
+        },
+        {
+          "value": 6.59,
+          "weight_g": 585,
           "per_100g": 0.659
         }
       ]
